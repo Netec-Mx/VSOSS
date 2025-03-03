@@ -8,9 +8,9 @@
 
 ## **Laboratorio \# 10**
 
-### **Creación de una política de vSAN**
+> ### **Creación de una política de vSAN**
 
-Actividades por realizar:
+#### Actividades por realizar:
 
 > 1\. Examinar la política de almacenamiento predeterminada
 >
@@ -81,7 +81,7 @@ Examinar la política de almacenamiento predeterminada de vSAN.
 
 Se ha preconfigurado un almacén de datos de **vSAN**
 
-En el menú principal, seleccione **Policies and Profiles**.
+En el menú principal, seleccionar **Policies and Profiles**.
 
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -94,20 +94,20 @@ en **EDIT**
 <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-En la página **Name and description**, haga click en **NEXT**
+En la página **Name and description**, click en **NEXT**
 
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-6\. En la página **vSAN**, examine las reglas en las pestañas
+En la página **vSAN**, examinar las reglas en las pestañas
 **Availability, Storage Rules, Advanced Policy Rules, and Tags.**
 
-Identifique cuantas fallas puede tolerar
+Identificar cuantas fallas puede tolerar
 
-<img src="./media/image9.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image9.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-7\. Haga click en **CANCEL**.
+Click en **CANCEL**.
 
 ## **Tarea \# 2**
 
@@ -116,40 +116,41 @@ alt="A computer screen shot of a computer screen Description automatically gener
 Crear una política de almacenamiento **vSAN** personalizada que no
 proporciona tolerancia a errores.
 
-En el panel derecho, haga click en **CREATE**.
+En el panel derecho, click en **CREATE**.
 
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Name and description**, ingrese
-**vSAN-VM-Custom-Policy-FTT0** en el cuadro de texto **Name** y haga
-click en **NEXT**.
+En la página **Name and description**, ingresar
+**vSAN-VM-Custom-Policy-FTT0** en el cuadro de texto **Name**, click en
+**NEXT**.
 
-<img src="./media/image11.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image11.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Policy structure**, en Reglas **Datastore specific
-rules**, seleccione la casilla de verificación **Enable rules for “vSAN”
-storage** y haga click en **NEXT**.
+En la página **Policy structure**, en la sección **Datastore specific
+rules**, activar la opción de verificación **Enable rules for “vSAN”
+storage**, click en **NEXT**.
 
-<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **vSAN,** en la pestaña **Availability**, en la lista
-desplegable **Failures to tolerate**, seleccione **No data redundancy.**
-Vea la información del espacio de almacenamiento consumido debajo del
-menú desplegable, click en **NEXT**.
+desplegable **Failures to tolerate**, seleccionar **No data
+redundancy.** Observar la información del espacio de almacenamiento
+consumido debajo del menú desplegable, click en **NEXT**.
 
-<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-En la página **Storage compatibility**, haga click en **NEXT**. Solo
-**vsanDatastore** aparece en la lista de Almacenamiento compatible.
+En la página **Storage compatibility**, click en **NEXT**.
+
+Solo **vsanDatastore** aparece en la lista de Almacenamiento compatible.
 
 <img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-7\. En la página **Review and finish**, haga click en **FINISH**.
+En la página **Review and finish**, click en **FINISH**.
 
 <img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -157,7 +158,8 @@ alt="A screenshot of a computer Description automatically generated" />
 Verificar que la política de almacenamiento
 **vSAN-VM-Custom-Policy-FTT0** se haya creado y aparezca en la lista.
 
-Es posible que deba desplazarse por la lista de **VM Storage Policies**.
+Es posible que sea necesario desplazarse por la lista de **VM Storage
+Policies**.
 
 <img src="./media/image16.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -169,7 +171,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Crear una máquina virtual y aplicar la nueva política de almacenamiento
 de **vSAN**.
 
-En el menú principal, seleccionar **Inventory** y dar click en el ícono
+En el menú principal, seleccionar **Inventory**, click en el ícono
 **Hosts & clusters**.
 
 Clonar una máquina virtual desde **Photon-01**.
@@ -185,128 +187,127 @@ En la página **Select a name and folder**, ingresar **Payload-02** en el
 cuadro de texto **Virtual machine name,** seleccionar **Lab VMS** como
 ubicación y dar click en **NEXT**.
 
-<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 En la página **Select a compute resource**, expander **SA-Datacenter** y
-**SA-Compute-02**, seleccionar **sa-esxi-05.vclass.local** y dar click
-en **NEXT**.
+**SA-Compute-02**
+
+Seleccionar **sa-esxi-05.vclass.local** y dar click en **NEXT**.
 
 Es posible que se vea una advertencia de compatibilidad para el host
 ESXi. Esta advertencia se puede ignorar de forma segura.
 
-<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Select storage**, seleccionar **Datastore Default** en el
 menú desplegable **VM Storage Policy**.
 
-Seleccione **OPSCALE-Datastore** de la lista de datastores y haga click
-en **NEXT**.
+Seleccionar **OPSCALE-Datastore** de la lista de datastores, click en
+**NEXT**.
 
-<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Select clone options**, seleccione solamente **Power on
-virtual machine after creation** y haga click en **NEXT**.
+En la página **Select clone options**, seleccionar solamente **Power on
+virtual machine after creation,** click en **NEXT**.
 
-<img src="./media/image21.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image21.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a chat Description automatically generated" />
 
-En
-la página **Ready to complete**, haga click en **FINISH**.
+En la página **Ready to complete**, click en **FINISH**.
 
-<img src="./media/image22.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image22.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Verificar el panel de tareas recientes para verificar que la tarea
-Clonar máquina virtual se complete correctamente.
+Observar el panel de tareas recientes para verificar que la tarea Clonar
+máquina virtual se complete correctamente.
 
 Verificar que la nueva máquina virtual esté incluida en el panel de
 navegación y esté encendida.
 
-Si no ve la máquina virtual incluida y encendida, haga click en el ícono
+Si no ve la máquina virtual incluida y encendida, click en el ícono
 **Update**
 
 <img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Asigne la política de almacenamiento **vSAN-VM-Custom-Policy-FTT0** a
+Asignar la política de almacenamiento **vSAN-VM-Custom-Policy-FTT0** a
 **Payload-02**.
 
-En el panel de navegación, haga click con el botón derecho en la VM
-**Payload-02** y seleccione **VM Policies**, seleccionar **Edit VM
+En el panel de navegación, click con el botón derecho en la VM
+**Payload-02** y seleccionar **VM Policies**, seleccionar **Edit VM
 Storage Policies**
 
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Seleccione **vSAN-VM-Custom-Policy-FTT0** en el menú desplegable **VM
-storage policy**. Haga click en **OK**.
+Seleccionar **vSAN-VM-Custom-Policy-FTT0** en el menú desplegable **VM
+storage policy**, click en **OK**.
 
-<img src="./media/image25.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image25.png" style="width:6.19419in;height:3.5298in"
 alt="A screen shot of a computer Description automatically generated" />
 
-Supervise el panel de tareas recientes para verificar que la tarea
-**Reconfigure virtual machine** se complete correctamente.
+Supervisar el panel de tareas recientes para verificar que la tarea
+**Reconfigure virtual machine** se termine correctamente.
 
 En el panel de navegación, seleccionar **Payload-02**.
 
-En la pestaña **Summary**, revise el recuadro **Related Objects** y el
+En la pestaña **Summary**, revisar el recuadro **Related Objects** y el
 recuadro **VM Storage Policies**.
 
-Es posible que deba desplazarse hacia abajo en el panel derecho para ver
-estos recuadros. Revisar la configuración
+Es posible que sea necesario desplazarse hacia abajo en el panel derecho
+para ver estos recuadros. Revisar la configuración
 
 Notar que **VM Storage Policy Compliance** marca como **Not Applicable**
 
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-**Actividad \# 4**
+## **Actividad \# 4**
 
-**Hacer que la máquina virtual cumpla con la configuración
-preestablecida**
+### **Hacer que la máquina virtual cumpla con la configuración preestablecida**
 
-Migre la máquina virtual **Payload-02** desde el datastore **VMFS**
+Migrar la máquina virtual **Payload-02** desde el datastore **VMFS**
 compartido al almacén de datos **vSAN** para hacerla compatible con su
 política de almacenamiento.
 
-En el panel de navegación, haga click con el botón derecho en
-**Payload-02** y seleccione **Migrate**.
+En el panel de navegación, click con el botón derecho en **Payload-02**
+y seleccionar **Migrate**.
 
 <img src="./media/image27.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Select a migration type**, haga click en **Change storage
-only** y haga click en **NEXT**.
+En la página **Select a migration type**, click en **Change storage
+only**, click en **NEXT**.
 
-<img src="./media/image28.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image28.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Select Storage**, dejar seleccionada la opción **Keep
 existing VM storage policies** en el menú desplegable **VM Storage
 Policy**.
 
-En la lista de datastores, seleccione **vsanDatastore** y haga click en
+En la lista de datastores, seleccionar **vsanDatastore**, click en
 **NEXT**.
 
 Tener en cuenta que **vsanDatastore** es el único almacén de datos que
 aparece como compatible.
 
-<img src="./media/image29.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image29.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Ready to complete**, haga click en **FINISH**.
+En la página **Ready to complete**, click en **FINISH**.
 
 <img src="./media/image30.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Supervisar el panel de tareas recientes hasta que la tarea se complete
+Supervisar el panel de tareas recientes hasta que la tarea se termine
 correctamente.
 
 En el panel derecho, con la VM seleccionada, click en **Summary** y
-observe el recuadro **VM Storage Policies** y haga click en **Check
+observar el recuadro **VM Storage Policies**, click en **Check
 Compliance**.
 
 <img src="./media/image31.png" style="width:6.5in;height:3.65625in"

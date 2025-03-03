@@ -10,7 +10,7 @@
 
 ### **Respaldo del vCenter Server**
 
-Actividades por realizar:
+#### Actividades por realizar:
 
 1.  Acceso a la consola de administración del vCenter Server
 
@@ -125,7 +125,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Para realizar un respaldo inmediato
 
-En **Backup location** establecer `nfs://172.20.10.15/msnt/NFS-POOL`
+En **Backup location** establecer **nfs://172.20.10.15/msnt/NFS-POOL**
 (1)
 
 Username: `root`
@@ -148,7 +148,7 @@ la aplicación de instalación del vCenter
 
 Del ISO ejecutar la aplicación Installer
 
-<img src="./media/image11.png" style="width:7.00741in;height:5.37103in"
+<img src="./media/image11.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la aplicación usar la opción **Restore** (1)

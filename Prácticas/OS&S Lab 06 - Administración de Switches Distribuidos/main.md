@@ -10,7 +10,7 @@
 
 ### **Administración de Switches Distribuidos**
 
-Actividades a realizar:
+#### Actividades a realizar:
 
 1.  Agregación de un grupo de puertos en un Switch distribuido
 
@@ -81,30 +81,30 @@ Click en **Login**
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la vista de **Redes** (1), click en el switch **vds Production** (2),
+En la vista de **Redes** (1), click en el switch **vds-Production** (2),
 en el menú contextual seleccionar **Distributed Port Group** (3), click
 en **New Distributed port Group** (4)
 
-<img src="./media/image6.png" style="width:6.69729in;height:4.36529in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image6.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 En el paso **Name and Location** (1), proporcionar el nombre del nuevo
 grupo de puertos **pg-for-testing** (2), **NEXT** (3)
 
-<img src="./media/image7.png" style="width:3.82639in;height:2.28472in"
+<img src="./media/image7.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso **Configure settings** (1), dejar valores por default,
-excepto **VLAN Type** y **Vlan ID**, establecerlos como **VLAN** (2)
-**10** (3), **NEXT** (4), esta última configuración la utilizaremos para
+excepto **VLAN Type** y **Vlan ID**, establecerlos como **VLAN** **10**
+(2), **NEXT** (4), esta última configuración la utilizaremos para
 detectar un error de configuración.
 
-<img src="./media/image8.png" style="width:3.89583in;height:2.30556in"
+<img src="./media/image8.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se muestran a configuración a establecer, **FINISH** (1)
 
-<img src="./media/image9.png" style="width:3.90972in;height:2.35417in"
+<img src="./media/image9.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 2**
@@ -123,70 +123,108 @@ alt="A screenshot of a computer Description automatically generated" />
 Establecer **Enabled** en ambas secciones **VLAN and MTU**, y en
 **Teaming and Failover, OK** (3)
 
-<img src="./media/image11.png" style="width:1.91667in;height:2.36806in"
+<img src="./media/image11.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 3**
 
 ### **Verificar la funcionalidad del estado de salud del switch distribuido**
 
-Con esto, dado que establecimos en el grupo de puertos la vlan 10, y el
-tráfico no aplica en esa vlan el servicio de “**Health check”** detecta
-esta inconsistencia y se muestra el error de configuración.
+Es importante considerar que los resultados de los cambios que se
+estableció de VLAN 10 y MTU pueden ser o no de impacto en la
+configuración dependiendo de como está configurada la red física.
+
+Si la red física está configurada y no soporta la configuración del
+Swith el servicio de “**Health check”** detectará la inconsistencia.
 
 En la vista de Redes (1), click en el switch **vds Production** (2),
 click en la pestaña **Monitor** (3), en la sección de **Tasks and
-Events** click en **Health** (4), click en el host **ESXi_01** (5),
-observar la advertencia (6) relacionada con la **VLAN 10** (7)
+Events** click en **Health** (4), click en el host **sa-esxi-01**(5),
+observar que la configuración es consistente con la red física, esto
+puede ser si la red está en modo troncal.
 
-<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image12.png"
+style="width:6.50069in;height:3.65347in" />
+
+Agregar otra condición a detectar con esta funcionalidad al modificar el
+MTU en el Switch para manejar Jumbo frames altamente utilizado en el
+storage
+
+Click derecho en el Switch **vds Production**, seleccionar **Settings**,
+click en **Edit Settings**
+
+<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
+
+Click en la pestaña **Advanced**, en el campo **MTU** **(Bytes)**
+escribir 9000, click en **OK**
+
+<img src="./media/image14.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
-## **Actividad \# 4**
+Se nota que esto afectó a todos los hosts, observar que no es compatible
+con la configuración física.
 
-### **Corrección de errores reportados**
+<img src="./media/image15.png" style="width:6.5in;height:3.49375in"
+alt="A screenshot of a computer Description automatically generated" />
+
+**Actividad \# 4**
+
+**Corrección de errores reportados**
 
 Para corregir el error de configuración detectado
 
-En la vista de **Redes** (1), click en el port group **pg-for-testing**
-(2), en el menú contextual seleccionar **Edit Settings** (3)
-
-<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+En la vista de **Redes**, click en el port group **pg-for-testing**, en
+el menú contextual seleccionar **Edit Settings**
 
 En la sección **VLAN** (1) establecer en **VLAN Type:** **None** (2),
 **OK** (3)
 
-<img src="./media/image14.png" style="width:3.875in;height:2.35417in"
+<img src="./media/image16.png" style="width:3.875in;height:2.35417in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la vista de Redes (1), click en el portgroup **pg-for-testing** (2),
+Click derecho en el Switch **vds Production**, seleccionar **Settings**,
+click en **Edit Settings**
+
+<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
+
+Click en la pestaña **Advanced**, en el campo **MTU** **(Bytes)**
+escribir 1500, click en **OK**
+
+<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer Description automatically generated" />
+
+En la vista de Redes (1), click en el switch **vds Production** (2),
 click en la pestaña **Monitor** (3), en la sección de **Tasks and
 Events** click en **Health** (4), ya no se observan errores
 
-<img src="./media/image15.png" style="width:6.5in;height:3.52083in"
+<img src="./media/image18.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
+
+**  
+**
 
 ## **Actividad \#4**
 
 ### **Anular la verificación de estado de salud del switch distribuido**
 
-Para desactivar la función “Health check”
+Para desactivar la función “**Health check**”
 
 En la vista de **Redes** (1), click en el switch **vds Production** (2),
 click en la pestaña **Configure** (3), en la sección de **Settings**
 click en **Health** **Check** (4), click en **EDIT** (6)
 
-<img src="./media/image16.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Establecer **Disabled** en ambas secciones **VLAN** **and** **MTU** (1)
 y **Teaming** **and** **Failover** (2), **OK** (3)
 
-<img src="./media/image17.png" style="width:1.94105in;height:2.33818in"
+<img src="./media/image20.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
-## **Actividad \# 5**
+## **Actividad \# 6**
 
 ### **Exportación de la configuración de un switch distribuido**
 
@@ -197,16 +235,16 @@ En la vista de **Redes** (1), click en el switch **vds Production** (2),
 en el menú contextual seleccionar **Settings** (3), click en **Export
 configuration** (4)
 
-<img src="./media/image18.png" style="width:6.21437in;height:3.36021in"
+<img src="./media/image21.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Establecer **Distributed switch and all port groups** (1), **OK** (2)
 
-<img src="./media/image19.png" style="width:1.92823in;height:2.37698in"
+<img src="./media/image22.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se genera el archivo **Backup.zip** (1) que se descarga en el
 escritorio.
 
-<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />

@@ -10,7 +10,7 @@
 
 ### **Trabajo con Certificados**
 
-Actividades por realizar:
+#### Actividades por realizar:
 
 1.  Examinar el certificado SSL de una Máquina Virtual
 
@@ -111,8 +111,8 @@ Thumbprint:
 La huella digital del certificado (**Thumbprint**), también llamada hash
 de certificado, es única y cambia con cada certificado generado.
 
-Al terminar de revisar el certificado SSL de máquina, haga click en
-**BACK TO**
+Al terminar de revisar el certificado SSL de máquina, click en **BACK
+TO**
 
 **CERTIFICATE MANAGEMENT** (1)
 
@@ -125,8 +125,8 @@ Click en **VIEW DETAILS** (2) para el primer certificado en la sección
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Observar que el certificado fue emitido por **CA** que indica que VMware
-CA emitió el certificado. CA se refiere a la VMCA en vCenter
+Observar que el certificado fue emitido por **CA,** que indica que
+VMware CA emitió el certificado. CA se refiere a la VMCA en vCenter
 
 Click en **BACK TO CERTIFICATE MANAGEMENT**
 
@@ -164,18 +164,19 @@ Dejar todos los demás campos como predeterminados.
 
 Click en **NEXT** (1).
 
-<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Click en **FINISH** (1) para cerrar el asistente.
 
-<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 La generación de la CSR de vCenter en esta actividad es sólo para fines
 de prueba.
 
-## **Tarea 3: Reemplazar un certificado SSL de máquina con un certificado CA pregenerado**
+## Actividad # 3
+### Reemplazar un certificado SSL de máquina con un certificado CA pregenerado
 
 Importar y reemplazar el certificado autofirmado (**self-signed
 certificate)** de VMware CA con un certificado firmado por una entidad
@@ -195,35 +196,35 @@ En la página **Choose apropriate option** (1) seleccionar **Replace with
 external CA certificate (requires private key)** (2). Click en **NEXT**
 (3)
 
-<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image15.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el campo **Machine SSL Certificate** (2), click **BROWSE FILE** (3).
 
-<img src="./media/image16.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image16.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
 
 Seleccionar **ca_vcsa.crt** (4), dar click en **OPEN** (5)
 
-<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Después de seleccionar este archivo, el cuadro de texto se completará
 con la información del certificado firmado por la entidad certificadora.
 
-En el cuadro **Chain of trusted root certificates**, seleccione **BROWSE
-FILE** (3).
+En el cuadro **Chain of trusted root certificates**, seleccionar
+**BROWSE FILE** (3).
 
-<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
 
 seleccionar **RootCA.crt** (4), click en **OPEN** (5)
 
-<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Después de seleccionar este archivo, el cuadro de texto se completará
@@ -233,25 +234,25 @@ En el cuadro **Private Key,** click en **BROWSE FILE**
 
 En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
 
-Seleccionar el archivo **vmca_issued_key.key**, click en **OPEN**.
+seleccionar el archivo **vmca_issued_key.key**, click en **OPEN**.
 
-Después de seleccionar este archivo, el cuadro de texto se completará
-con la información de la Clave privada.
+Después de seleccionar este archivo, el cuadro de texto se llenará con
+la información de la Clave privada.
 
 Clic en **NEXT**.
 
-<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **System Backup**, seleccione la casilla de verificación
-**Backup acknowledgment** y haga clic en **NEXT**.
+En la página **System Backup**, seleccionar la opción de verificación
+**Backup acknowledgment**, click en **NEXT**.
 
-<img src="./media/image21.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image21.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Review**, click en **FINISH**.
 
-<img src="./media/image22.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image22.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Después de unos segundos, debería aparecer un cuadro de mensaje que
@@ -261,21 +262,21 @@ cambiado el certificado.
 
 Click en **UPDATE**.
 
-En una nueva pestaña de **Firefox**, abra el menú Firefox y seleccione
+En una nueva pestaña de **Firefox**, abrir el menú Firefox y seleccionar
 **Settings**.
 
 Alternativamente, puede abrir una nueva pestaña del navegador Firefox e
 ingresar
 
-**about:preferences** en el **campo de dirección**.
+`about:preferences` en el **campo de dirección**.
 
 Buscar la sección de **Cookies**
 
 <img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Click en **Clear data**, anule la selección de **Cookies and Site Data**
-y haga clic en **Clear**.
+Click en **Clear data**, anular la selección de **Cookies and Site
+Data,** click en **Clear**.
 
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -291,20 +292,20 @@ Con vSphere Client, inicie sesión en la instancia de vCenter
 
 sus credenciales de laboratorio de vCenter.
 
-Si recibe el mensaje de Warning: Potential Security Risk Ahead en su
+Si recibe el mensaje de **Warning: Potential Security Risk Ahead** en su
 session de Firefox
 
-haga click en **Advanced**
+de click en **Advanced**
 
 <img src="./media/image25.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Y haga clic en **Accept the Risk and Continue** para pasar a la página
-de inicio de sesión de vCenter.
+Dar click en **Accept the Risk and Continue** para pasar a la página de
+inicio de sesión de vCenter.
 
-Si no puede iniciar sesión en vCenter después de que se hayan reiniciado
-los servicios, intente iniciar sesión con una nueva ventana privada de
-Firefox.
+Si no es posible iniciar sesión en vCenter después de que se hayan
+reiniciado los servicios, intentar iniciar sesión con una nueva ventana
+privada de Firefox.
 
 En el menú principal, seleccione **Administration** seleccione
 **Certificate Management** en la sección **Certificates**.
@@ -331,4 +332,4 @@ alt="A screenshot of a computer Description automatically generated" />
 
 ### IMPORTANTE:
 
-#### Las fechas válidas y la huella digital del certificado actual deben ser diferentes a las del certificado anterior.
+### Las fechas válidas y la huella digital del certificado actual deben ser diferentes a las del certificado anterior.

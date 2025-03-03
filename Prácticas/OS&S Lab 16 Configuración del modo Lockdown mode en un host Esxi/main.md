@@ -1,10 +1,10 @@
-> # VMware vSphere
+> # **VMware vSphere**
 >
-> ## Operación, Escalamiento y Seguridad
+> ## **Operación, Escalamiento y Seguridad**
 >
-> ### Versión 8
+> ### **Versión 8**
 >
-> #### Guía de uso de laboratorio
+> #### **Guía de uso de laboratorio**
 
 ## **Laboratorio \# 16**
 
@@ -76,38 +76,31 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Para activar el servicio SSH
 
-En la vista de **Hosts & Clusters** (1), click en el host **ESXi_01**
+En la vista de **Hosts & Clusters** (1), click en el host **sa-esxi-01**
 (2), click en la pestaña **Configure** (3), en la sección **System**,
 click en **Services** (4), click en **SSH** (5) click en **Start** (6)
 
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-El servicio está activo
+El servicio SHH está activo
 
 <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen with a black and white screen Description automatically generated" />
 
-Verificar que se acepta una conexión con **PuTTY** usando la cuenta de
+En el escritorio ejecutar la aplicación **Remmina**
+
+Verificar que se acepta una conexión con **Remmina** usando la cuenta de
 root, establecer como host
 
-**sa-esxi-01.vclass.local** (1) y conexión con **SSH** (2)
+**sa-esxi-01.vclass.local** (1)
 
-<img src="./media/image8.png" style="width:4.81074in;height:4.70839in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image8.png" style="width:6.19419in;height:3.5298in"
+alt="A computer screen with a white and black box Description automatically generated" />
 
-Se muestra la alerta de conexión con SSH
+Se logra la conexión con el Host sa-esxi-01.vclass.local
 
-<img src="./media/image9.png" style="width:5.0246in;height:3.70156in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Se logra conexión con la cuenta de
-
-User: `Root`
-
-Password: `VMware1!`
-
-<img src="./media/image10.png" style="width:6.5in;height:4.11042in"
+<img src="./media/image9.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 2**
@@ -116,31 +109,33 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Enseguida activar el modo de protección Lockdown Mode
 
-En la vista de **Hosts & Clusters** (1), click en el host **ESXi_01**
+En la vista de **Hosts & Clusters** (1), click en el host **sa-esxi-01**
 (2), click en la pestaña **Configure** (3), en la sección **System**,
 click en **Security Profile** (4), observar que está deshabilitada la
 protección (5), click en **EDIT** (6)
 
-<img src="./media/image11.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image10.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen with a message Description automatically generated" />
 
 Seleccionar modo **NORMAL** (1) click en **OK** (2)
 
-<img src="./media/image12.png" style="width:5.2434in;height:4.22523in"
+<img src="./media/image11.png" style="width:4.48698in;height:3.39823in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se activa la protección (1), notar que la lista de **Exception User**
 está vacía
 
-<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
-Verificar que no se acepta una conexión con **PuTTY** usando la cuenta
-de root, establecer como host
+Verificar que no se acepta una conexión con **Remmina** usando la cuenta
+de **root**,
 
-**sa-esxi-01.vclass.local** (1) y conexión con **SSH** (2)
+Activar Reminna
 
-<img src="./media/image14.png" style="width:4.69113in;height:4.83153in"
+**sa-esxi-01.vclass.local** (1)
+
+<img src="./media/image13.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se deniega la conexión con la cuenta de
@@ -149,42 +144,43 @@ User: `Root`
 
 Password: `VMware1!`
 
-<img src="./media/image15.png" style="width:4.125in;height:1.72917in"
+<img src="./media/image14.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-<img src="./media/image16.png" style="width:6.5in;height:4.11042in"
-alt="A screenshot of a computer Description automatically generated" />
+## **Actividad \# 3**
 
-## Actividad \# 3
-
-## Deshabilitar el Modo Lockdown mode
+### **Deshabilitar el Modo Lockdown mode**
 
 Para des-habilitar la protección click en **EDIT** (1)
 
-<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 Click en **Disable** (1), **OK** (2)
 
-<img src="./media/image18.png" style="width:6.2612in;height:5.07637in"
+<img src="./media/image16.png" style="width:4.48698in;height:3.39823in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra el nuevo estado
 
-<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 Apagar el servicio de SSH
 
-En la vista de **Hosts & Clusters** (1), click en el host **ESXi_01**
+En la vista de **Hosts & Clusters** (1), click en el host **sa-esxi-01**
 (2), click en la pestaña **Configure** (3), en la sección **System**,
 click en **Services** (4), click en **SSH** (5) click en **STOP** (6)
 
-<img src="./media/image20.png" style="width:6.5in;height:3.65625in" />
+<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer Description automatically generated" />
 
 Aparece la advertencia de apagado de SSH, OK (1)
 
-<img src="./media/image21.png" style="width:6.51448in;height:2.09761in"
+<img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 El servicio se ha detenido
+
+<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer Description automatically generated" />

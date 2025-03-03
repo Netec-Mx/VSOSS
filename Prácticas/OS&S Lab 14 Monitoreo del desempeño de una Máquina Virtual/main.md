@@ -8,9 +8,9 @@
 
 ## **Laboratorio \# 14**
 
-## **Monitoreo del desempeño de un Máquina Virtual**
+> ### **Monitoreo del desempeño de un Máquina Virtual**
 
-Actividades por realizar:
+#### Actividades por realizar:
 
 1.  Establecer afinidad de CPU
 
@@ -87,122 +87,96 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Click en **vSphere DRS** (1), **OK** (2)
 
-<img src="./media/image7.png" style="width:2.91043in;height:2.46145in"
-alt="A screenshot of a computer screen Description automatically generated" />
+<img src="./media/image7.png" style="width:8in;height:6.in"
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
 El servicio está deshabilitado
 
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Migrar la VM Linux_02, click en la VM (1), en el menú contextual
-seleccionar Migrate (2)
+Nos aseguramos de que las máquinas Linux-CPU-01 y Linux-CPU-02 estén en
+mismo servidor
+
+sa-esxi-05
 
 <img src="./media/image9.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
-
-Seleccionar **Change compute resource only** (1), **NEXT** (2)
-
-<img src="./media/image10.png" style="width:3.89573in;height:2.39811in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Seleccionar el host **ESXi_01** (2), **NEXT** (3)
-
-<img src="./media/image11.png" style="width:3.89298in;height:2.37594in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Click en **NEXT** (1)
-
-<img src="./media/image12.png" style="width:3.88459in;height:2.37577in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Aceptar el resumen **FINISH** (1)
-
-<img src="./media/image13.png" style="width:3.88834in;height:2.39026in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Con el host **ESXi_01** seleccionado (2), click en la pestaña **VMS**
-(3), se pueden observar las dos VMs residiendo en el host **ESXI_01**
-(4)
-
-<img src="./media/image14.png" style="width:6.5in;height:3.65625in" />
 
 Para crear afinidad de CPU
 
 Con ambas máquinas apagadas realizar el siguiente procedimiento
 
-Click en la VM **Linux_01** (1), en el menú contextual seleccionar
+Click en la VM **Linux-CPU-01** (1), en el menú contextual seleccionar
 **Edit Settings** (2)
 
-<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image10.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 Expandir la sección de CPU (1), en el campo **Scheduling Affinity**
 establecer el cpu físico **0** (3) Click en **OK** (4)
 
-<img src="./media/image16.png" style="width:2.91424in;height:2.75936in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image11.png" style="width:8in;height:6.in"
+alt="A computer screen with a white box Description automatically generated" />
 
-Realizar la misma operación en la VM **Linux_02**
+Realizar la misma operación en la VM **Linux-CPU-02**
 
 ## **Actividad \# 2**
 
 ### **Establecer contención en dos VMS**
 
-Encender ambas máquinas virtuales **Linux_01** y **Linux_02**
+Encender ambas máquinas virtuales **Linux-CPU-01** y **Linux-CPU-02**
 
-<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
-<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 Para ambas Máquinas Virtuales en la pestaña de **Summary** dar click
 **LAUNCH WEB CONSOLE**
 
-Usar el password `VMware 1!`
-
-<img src="./media/image19.png" style="width:6.5in;height:3.49375in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Click en el ícono de **Apps** (1)
-
-<img src="./media/image20.png" style="width:6.5in;height:3.65625in" />
+Usar el password `VMware1!` si es necesario
 
 Ejecutar la aplicación **Terminal** (1)
 
-<img src="./media/image21.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Ejecutar los comandos para iniciar el script cpubusy.pl
+Ejecutar el comando para iniciar el script cpubusy.pl en ambas máquinas
 
-`cd Desktop`
+`./Desktop/cpubusy.pl`
 
-`chmod +x cpubusy.pl`
-
-`perl ./cpubusy.pl`
-
-<img src="./media/image22.png" style="width:6.5in;height:3.65625in" />
+<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 3**
 
-### **Explorar las opciones de gráficas de desempeño**
+**Explorar las opciones de gráficas de desempeño**
 
-En la vista de **Hosts & Clusters** (1), click en el Host ESXi_01 (2),
-click en la pestaña **Monitor** (3), En la sección **Performance** click
-en **Overview** (4),
+En la vista de **Hosts & Clusters** (1), click en el Host **sa-esxi-05**
+(2), click en la pestaña **Monitor** (3), En la sección **Performance**
+click en **Overview** (4)
 
 En ambas VM tendremos una aplicación que hace alta utilización de CPU
 con afinidad de CPU en CPU físico 0
 
-<img src="./media/image23.png" style="width:6.5in;height:3.65625in" />
+<img src="./media/image16.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
 Hay que asegurar tener gráficas en tiempo real, esto lo podemos ver al
-ver **Real-Time** a la izquierda de **Chart-Options** (5)
+ver **Real-Time** en el campo **period** (1)
+
+<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
+
+En la vista de **Hosts & Clusters** (1), click en el Host **sa-esxi-05**
+(2), click en la pestaña **Monitor** (3), En la sección **Performance**
+click en **Advanced** (4),
 
 Dar click en **Chart-Options** (5)
 
-<img src="./media/image24.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se despliega la caja de diálogo para determinar que métrica se despliega
@@ -211,53 +185,61 @@ en la gráfica, en este caso seleccionar **CPU** (1)
 De esta métrica seleccionar **Readiness** (2) y **Usage** (3), se puede
 filtrar en la gráfica la información del **cpu 0** y **cpu 1** (4)
 
-<img src="./media/image25.png" style="width:3.89948in;height:2.72893in"
+<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la sección **Performance Chart Legend** se pueden resaltar la gráfica
 de un objeto como **CPU 0** o **CPU 1**
 
-<img src="./media/image26.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Con la aproximación del mouse a una gráfica se despliega la información
 relacionada
 
-<img src="./media/image27.png" style="width:6.5in;height:3.49375in"
+<img src="./media/image21.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En esta gráfica se muestra el comportamiento de uso del cpu 0, de
 tiempos de espera de uso de cpu físico
 
-<img src="./media/image28.png" style="width:6.5in;height:3.49375in"
+<img src="./media/image22.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Para las máquinas Linux_01 la gráfica de **CPU ready** muestra
+Para la máquina **Linux-CPU- 01** la gráfica de **CPU ready** muestra
 contensión, es decir, tiene tiempo de espera para uso del cpu físico en
-competencia con la VM **Linux_02**
+competencia con la VM **Linux-CPU-02**
 
-<img src="./media/image29.png" style="width:6.5in;height:3.65625in"
+Para observarlo seleccione la **VM Linux-CPU-01,** click en **Monitor**,
+en la sección **Performance**, click en **Advance**
+
+A la derecha en la lista **View** seleccionar **CPU ready** (5)
+
+<img src="./media/image23.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer screen Description automatically generated" />
+
+<img src="./media/image24.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la VM2 se muestra de igual manera contensión
 
-<img src="./media/image30.png" style="width:6.5in;height:3.49375in"
+<img src="./media/image25.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Retornar las VMs a su estado anterior
 
 Apagar las VMs
 
-<img src="./media/image31.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image26.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Eliminar la afinidad de CPU, en ambas VMs al dar Edit Settings (3)
 
-<img src="./media/image32.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image27.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Expandir la sección de **CPU** y eliminar el **cpu 0** en el campo
 **Scheduling Affinity** (2), **OK** (3)
 
-<img src="./media/image33.png" style="width:2.89937in;height:2.7662in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image28.png" style="width:8in;height:6.in"
+alt="A computer screen with a computer screen Description automatically generated" />

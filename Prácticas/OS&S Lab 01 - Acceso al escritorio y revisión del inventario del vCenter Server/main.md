@@ -68,9 +68,9 @@ alt="A screenshot of a computer Description automatically generated" />
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
 Client login interface**
 
-User**: `administrator@vsphere.local`
+User: `administrator@vsphere.local`
 
-Password**: `VMware1!`
+Password: `VMware1!`
 
 Click en **Login**
 
@@ -84,9 +84,9 @@ alt="A screenshot of a computer Description automatically generated" />
 Abrir una instancia del browser Firefox con acceso directo al vSphere
 Client login interface
 
-User**: `administrator@vsphere.local`
+User: `administrator@vsphere.local`
 
-Password**: `VMware1!`
+Password: `VMware1!`
 
 Click en **Login**
 
@@ -175,8 +175,8 @@ En la vista de **máquinas virtuales y plantillas** (1) se tienen:
 
 2.  4 VMs tipo vCLS (2)
 
-3.  <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
-    alt="A screenshot of a computer Description automatically generated" />
+> <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
+> alt="A screenshot of a computer Description automatically generated" />
 
 En la vista de **datastores** (1) tenemos:
 
@@ -222,7 +222,7 @@ emergente
 Click en **NEW LICENCE** (1), Establezca la nueva licencia (2),
 verifique que es de vCenter (3), click en **OK** (4)
 
-<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image15.png" style="width:7.79596in;height:4.24969in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Observe que se lista la licencia en la interfaz
@@ -246,7 +246,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Click en **NEW** **LICENSE** (1), proporcione la licencia que le da su
 instructor (2), click en **OK** (3)
 
-<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image19.png" style="width:8.4499in;height:4.67535in"
 alt="A computer screen shot of a message Description automatically generated" />
 
 Se muestra en la interfaz la licencia asignada
@@ -263,7 +263,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra la advertencia de conexión click en **OK**
 
-<img src="./media/image22.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image22.png" style="width:9.08171in;height:4.89761in"
 alt="A screen shot of a computer Description automatically generated" />
 
 Adicionalmente habrá que quitar la advertencia de licencia vencida en el
@@ -299,10 +299,10 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra la advertencia de actualización, click en **OK**
 
-<img src="./media/image27.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image27.png" style="width:9.02524in;height:5.38682in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Nuestro inventario deberá lucir como se muestra en la imagen
 
-<img src="./media/image28.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image28.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />

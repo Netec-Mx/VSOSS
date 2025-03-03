@@ -8,9 +8,9 @@
 
 ## **Laboratorio \# 8**
 
-### **Exploración de la configuración de un datastore vSAN**
+> ### **Exploración de la configuración de un datastore vSAN**
 
-Actividades por realizar:
+#### Actividades por realizar:
 
 1.  Revisar la configuración de un datastore de vSAN
 
@@ -74,7 +74,7 @@ Click en **Login**
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-**2.- Verificar que **VSAN** está habilitado en el cluster**
+Verificar que **VSAN** está habilitado en el cluster
 
 En la vista de **Hosts & Clusters** (1), seleccionar el cluster
 **SA-Compute-02** (2), click en la pestaña **Configure** (3), en la
@@ -84,7 +84,7 @@ sección de configuración seleccionar **Quickstart,** revisar que
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-**3.- Revisar que Hosts pertenecen al cluster de **vSAN****
+Revisar que Hosts pertenecen al cluster de **vSAN**
 
 En la vista de **Hosts & Clusters** (1), seleccionar el cluster
 **SA-Compute-02** (2), click en la pestaña **Summary** (3)
@@ -102,8 +102,7 @@ en el cluster (2)
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-**4.- Revisar la configuración de grupos de discos en el cluster de**
-**vSAN**
+Revisar la configuración de grupos de discos en el cluster de **vSAN**
 
 En la vista de **Hosts & Clusters** (1), seleccionar el cluster
 **SA-Compute-02** (2), click en la pestaña **Configure** (3)
@@ -120,8 +119,8 @@ Expanda el grupo de discos **Disk group** para ver sus detalles
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-**5.- Identificar la configuración del puerto VMkernel que se usa para
-accesar la red de** **vSAN**.
+Identificar la configuración del puerto VMkernel que se usa para accesar
+la red de **vSAN**.
 
 En la vista de **Hosts & Clusters** (1), seleccionar el cluster
 **SA-Compute-02** (2), click en el host **ESXI_04** (3), click en la
@@ -133,15 +132,15 @@ sus detalles
 
 Click en la pestaña de **Properties** (8) para el puerto **vmk2**
 
-Verificar que aparece el servicio **vSAN** activo para este puerto(9).
+Verificar que aparece el servicio **vSAN** activo para este puerto (9).
 
 <img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-**6.- Ver la capacidad de almacenamiento del cluster de vSAN** 
+Ver la capacidad de almacenamiento del cluster de vSAN
 
 En la vista de **Hosts & Clusters** (1), seleccionar el cluster
-**SA-Compute-02** (2), click en la pestaña **Summary** (3),
+**SA-Compute-02** (2), click en la pestaña **Summary** (3)
 
 Desplazarse entre las secciones para hallar en la sección de **vSAN**
 que muestra la capacidad de almacenamiento. (4)
@@ -163,7 +162,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Desde el menú principal (1) seleccionar **Policies and Profiles** (2)
 
-<img src="./media/image14.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image14.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 En el panel de navegación verificar que políticas de almacenamiento para
@@ -191,7 +190,7 @@ vSAN
 En la vista de **Datastores** (1) click en el datastore
 **vsanDatastore** (2), click en la pestaña de **VMs** (3)
 
-En la misma aparece la VM Photon-03
+En la misma aparece la **VM Photon-03**
 
 <img src="./media/image16.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />

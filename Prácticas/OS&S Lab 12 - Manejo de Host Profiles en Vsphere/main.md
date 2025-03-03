@@ -1,8 +1,8 @@
 > # **VMware vSphere**
 >
-> ## **Operación, Escalamiento y Seguridad**
+> ## **Manejo de Host Profiles en Vsphere**
 >
-> ### **Versión 8**
+>### **Versión 12**
 >
 > #### **Guía de uso de laboratorio**
 
@@ -10,22 +10,19 @@
 
 ### **Manejo de Host Profiles en Vsphere**
 
-Actividades por realizar:
+#### **Actividades por realizar:**
 
-1.  Revisión de la versión de vSphere en los hosts de un cluster
+1\. Configuración de un cluster con una imagen única
 
-2.  Actualización y homogenización de la versión de los Host ESXi
+2\. Configurar un cluster con perfiles de configuración
 
-3.  Creación de un perfil de configuración homogénea de Host en el
-    Cluster
+3\. Retornar un host a una configuración específica
 
-4.  Desviación de la configuración de un Host
-
-5.  Retorno a la configuración preestablecida de un host modificado.
+4\. Revisar el documento de configuración
 
 ## **Actividad \# 1**
 
-### **Revisión de la versión de vSphere en los hosts de un cluster**
+### **Configuración de un cluster con una imagen única**
 
 Utilizar la liga de acceso proporcionada por su instructor
 
@@ -79,347 +76,318 @@ Click en **Login**
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Con el propósito de poder administrar las actualizaciones de los host
-ESXi se puede configurar un cluster basado en imágenes.
+En un cluster se realizará una conversión de uso de **configuraciones
+base** (baselines) al uso de **perfiles de servidor**, para que los
+hosts estén **homologados**.
 
-Observar la versión de la imagen del Host **ESXi_01**, seleccionar el
-host para identificar que la versión es **ESXi 8.0.0** (1) y (2)
+Iniciaremos esto revisando la configuración inicial del cluster
 
-<img src="./media/image6.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+En la vista de **Hosts & Cluster, click** en el **cluster
+SA-Compute-01**,
 
-Una buena práctica es que las imágenes de todos los hosts en un cluster
-sea la misma, esto se puede realizar desde la creación misma del cluster
+Click en la pestaña **Configure**
 
-Enseguida se muestra el procedimiento de actualización y homogeneización
-del cluster con Hosts que tienen máquinas virtuales encendidas, en donde
-el cluster tiene habilitado DRS.
+En la sección **Desired State**, clic en **Configuration**
 
-En resumen, se seleccionará la nueva versión a la que se actualizarán
-los hosts y en cada caso para actualizar el Host, DRS moverá las VMS a
-otro Host para que el host en turno se ponga en modo mantenimiento, se
-actualice, se reinicie para que enseguida se puedan retornar VMS
-conforme sea necesario.
+Se nota que el cluster está actualmente trabajando con **configuraciones
+base** (baselines)
 
-## **Tarea \#2**
+Vea el mensaje desplegado
 
-### **Actualización y homogenización de la versión de los Host ESXi**
+Click en la pestaña **Updates**
 
-En la vista de **Hosts & Clusters** (1), click en el cluster
-**Production Cluster** (2), click en la pestaña **Configure** (3), en la
-sección **Desired State** click en **Configuration** (4).
+<img src="./media/image6.png"
+style="width:6.50069in;height:3.65347in" />
 
-Se nota que el cluster está configurado basado en configuraciones base
-“baselines”
+Revise los mensajes desplegados
+
+Para configurar el cluster para que trabaje con configuraciones basadas
+en imágenes
+
+click en **MANAGE WITH A SINGLE IMAGE**
 
 <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen with a computer screen Description automatically generated" />
 
-En amarillo se nos indican las ventajas de la configuración basada en
-perfiles de Hosts
-
-Procedamos a actualizar las versiones de los hosts
-
-En la vista de **Hosts & Clusters** (1), click en el cluster
-**Production Cluster** (2), click en la pestaña **Updates** (3), en la
-sección **Image** (4), click en **Edit** (5).
+Click en el botón **SETUP IMAGE MANUALLY**.
 
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer Description automatically generated" />
 
-Seleccionar la imagen del Host en la lista desplegable (1), click en
-**ver 8.0 U3c** (3), click en **VALIDATE**, esta nueva versión se
-aplicará a todos los hosts del cluster
+Del menú desplegable **ESXi Version** seleccionar la versión **8.0 U2 –
+22380479**
 
 <img src="./media/image9.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Con espera para la validación se presenta que la imagen es válida (1),
-click en **SAVE** (2).
+Dar click en **VALIDATE**.
+
+Esperar a que se despliegue que la imagen es válida
+
+En la sección **Convert to image**, click en el botón **SAVE** y esperar
+a que se verifique el cumplimiento
 
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer Description automatically generated" />
 
-Observar que los dos hosts no tienen esta versión 8.3 (1), importante
-notar que los hosts se tendrán que reiniciar (2)
-
-En el proceso, se tiene que dar click en **RUN PRE-CHECK** (3) en primer
-término para tener información de las posibles implicaciones de la
-actualización
-
-Después, dar click en **REMEDIATE ALL** (4).
+Click en **FINISH IMAGE SETUP**
 
 <img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Al dar click en **RUN PRE-CHECK** (2),
+Se despliega un comentario del proceso.
 
-<img src="./media/image12.png"
-style="width:6.50069in;height:3.65347in" />
+Click en **YES, FINISH IMAGE SETUP**.
 
-Se muestra que no se encontraron problemas en el cluster si se desea
-aplicar la actualización de imagen
+<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen with a message Description automatically generated" />
 
-<img src="./media/image13.png"
-style="width:6.50069in;height:3.65347in" />
+Se tendrá que verificar que los hosts cumplen con la configuración
 
-Para iniciar la homogenización de imagen, click en **REMEDIATE ALL**
-(2).
+<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen with a message box Description automatically generated" />
 
-<img src="./media/image14.png"
-style="width:6.50069in;height:3.65347in" />
+## **Actividad \#2**
 
-En la lista de tareas se nota el inicio del proceso (1)
+### **Configurar un cluster con perfiles de configuración**
+
+El propósito de usar perfiles de configuración es controlar, monitorear
+y en su caso retornar un host a una configuración específica.
+
+Dar click en la pestaña **Configure** seleccionando el cluster
+**SA-Compute-01**
+
+En la sección **Desired State click** en **Configuration**
+
+Para hacer que el cluster use una configuración usando perfiles de
+configuración, click en **CREATE CONFIGURATION**.
+
+<img src="./media/image14.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
+
+En la etapa **Create configuration**, click en **IMPORT FROM REFERENCE
+HOST** para establecer cual será la configuración a utilizar en el
+perfil
 
 <img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la vista de **Hosts & Clusters** (1), click en el cluster
-**Production Cluster** (2), click en el host **Esxi_01** (3), click en
-la pestaña **VMs** (4), Observar las VMs que están encendidas en el
-**Host ESXi_01** que está próximo en la actualización (5)
+Seleccionar el host **sa-esxi-01.vclass.local,** click en **IMPORT**.
 
-<img src="./media/image16.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image16.png" style="width:8in;height:6.in"
+alt="A computer screen shot of a computer Description automatically generated" />
 
-Se inicia la migración de la VM **Linux_01** al host **Esxi_02** (3)
-esto se realiza con apoyo de **DRS**
+Click en **CLOSE**
 
-<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+<img src="./media/image17.png" style="width:width:8in;height:6.in"
+alt="A screen shot of a computer Description automatically generated" />
 
-Ahora el host **Esxi_02** tiene a las dos VMs **Linux** y una VM
-**vCLS** (1)
+Click en **NEXT**.
 
 <img src="./media/image18.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer Description automatically generated" />
 
-El host **ESXi_01** entra en mantenimiento y la VM vCLS se apaga (2)
+En la sección **Validate configuration**, esperar a que se termine el
+proceso de validación, click en **NEXT**.
 
 <img src="./media/image19.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-El host ESXi_01, se actualiza y se reinicia (1)
+En la etapa **Pre-check and apply**, esperar a que termine el proceso de
+pre-verificación para la aplicación, click en **FINISH AND APPLY**.
 
 <img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se pierde conexión al host al reinicio (1)
+Click en **CONTINUE**.
 
 <img src="./media/image21.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen with a message Description automatically generated" />
 
-El host se reconecta (1), sale de modo de mantenimiento y se enciende la
-VM vCLS (2)
+Click en GO **TO CONFIGURATION**.
 
 <img src="./media/image22.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se inicia migración de las VMs (1) y (2) que están en el host
-**ESXi_02** para actualizarlo
+Se muestra la configuración obtenida como referencia
 
-<img src="./media/image23.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image23.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Ahora el host **Esxi_01** tiene las VMs (3)
+## **Actividad \# 3**
+
+### **Retornar un host a una configuración específica**
+
+En este caso, se mostrará como cambiar la configuración de un host para
+que ya no cumpla la configuración del perfil del cluster y como corregir
+el incumplimiento a la misma aplicando un proceso de reparación.
+
+El cambio de configuración será en la red
+
+Agregar un puerto **VMkernel** al host
+
+En la vista de **Hosts & Clusters**
+
+Seleccionar el host **sa-esxi-02.vclass.local**.
+
+Click en la pestaña **Configure**
+
+En la sección **Networking** click en **VMkernel adapters**
+
+Click en ADD **NETWORKING**.
 
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-El host ESXi_02 entra en modo de mantenimiento (1), la VM **vCLS** se
-apagó (2)
+En el paso **Select Connection Type** dejar seleccionada la opción
+**VMkernel Network Adapter,** click en **NEXT**.
 
 <img src="./media/image25.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Se aplica la actualización, se reinicia el host, se desconecta (1)
+En el paso **Select target device** seleccionar la opción **Select an
+existing standard switch**
+
+Enseguida seleccionar el Switch **vSwitch0,** click en **NEXT**.
 
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Se reincorpora el host Esxi_02 (1), se enciende la VM vCLS (2)
+En el paso **Add Networking** dejar las opciones de default, click en
+**NEXT**.
 
 <img src="./media/image27.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Se balancea el cluster, cada host tiene una VM Linux y una VM vCLS (2)
-
+En el paso **IPV4 Settings,** dejar seleccionada la opción **Obtain IPv4
+settings automatically**, click en **NEXT**
 <img src="./media/image28.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Para revisar que un host está en cumplimiento con la versión del cluster
-
-En la vista de **Hosts & Clusters** (1), click en el cluster
-**Production Cluster** (2), click en la pestaña **Updates** (3), Click
-en **Image** (4), Click en **CHECK COMPLIANCE** (5)
+Revisar la configuración final, click en **FINISH**.
 
 <img src="./media/image29.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-El host **ESXi_01** tiene la **versión 8.0.3** (1) sujeto de
-actualización (2)
+Aparecerá un adaptador adicional tipo vmk, verificar si es **vmk1,
+vmk2,** o **vmk3,** este podría ser diferente según el estado del
+laboratorio.
 
 <img src="./media/image30.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer Description automatically generated" />
 
-El host **ESXi_02** tiene la **versión 8.0.3** (1) sujeto de
-actualización (2)
+Con el propósito de verificar si el host cumple con la configuración del
+perfil
+
+Seleccionar en la vista de **Hosts & Clusters** el cluster
+**SA-Compute-01**
+
+click en la pestaña **Configure**
+
+En la sección Seleccionar **Desired State** click en **Configuration**.
+
+Click en la pestaña **Compliance,** click en **CHECK COMPLIANCE**.
 
 <img src="./media/image31.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-## **Tarea \#3**
-
-### **Creación de un perfil de configuración homogénea de Host en el Cluster**
-
-Para mantener a través del tiempo la configuración homogénea de los
-hosts es preferible usar el recurso de perfiles de Host llamado “Host
-Profiles”.
-
-En la vista de **Hosts & Clusters** (1), click en el cluster
-**Production Cluster** (2), click en la pestaña **Configure** (3), en la
-sección de **Desired State** (4) click en **Configuration** (5), click
-en **CREATE CONFIGURATION** (6)
+Se despliega el estado del host **sa-esxi-02.vclass.local** que no
+cumple con la configuración del perfil.
 
 <img src="./media/image32.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En este paso determinaremos desde donde se toma como referencia la
-configuración que deberá estar presente en todos los hosts en el cluster
+En este punto, para retornar el host a su configuración inicial
+establecida en el perfil del cluster
 
-Seleccionar **IMPORT FROM REFERENCE HOST**
+Click en **REMEDIATE**.
 
-<img src="./media/image33.png" style="width:6.51461in;height:3.56894in"
+<img src="./media/image33.png" style="width:6.5in;height:3.65625in"
+alt="A computer screen shot of a computer Description automatically generated" />
+
+Se realizará una verificación del proceso
+
+Expandir cada host para ver detalles
+
+Click en **NEXT**
+
+Verificar la información del posible impacto del proceso
+
+<img src="./media/image34.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Seleccionar como referencia el Host **ESXi_01** (1), **IMPORT** (2)
+Click en **REMEDIATE**.
 
-<img src="./media/image34.png"
-style="width:6.50069in;height:3.65347in" />
+<img src="./media/image35.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer Description automatically generated" />
 
-Se muestra que la importación de la configuración fue exitosa
+Observe el panel de tareas.
 
-<img src="./media/image35.png"
-style="width:6.50069in;height:3.49375in" />
+Como parte del proceso el host puede reiniciarse.
 
-Se muestra cual es la configuración seleccionada (1), Click en **NEXT**
-(2)
+Se ejecutará un segundo proceso de verificación del cumplimiento de la
+configuración
 
 <img src="./media/image36.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen with a white and black screen Description automatically generated" />
 
-Se ve que la configuración es válida (5) y que todos los hosts cumplen
-con una configuración homogénea (6), click en **NEXT** (7)
+El host ha regresado a la configuración inicial definida en el cluster
+
+Seleccionar el host **sa-esxi-02.vclass.local**
+
+Verificar que el proceso eliminó el adaptador kernel que se le agregó
+anteriormente.
 
 <img src="./media/image37.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
+alt="A computer screen shot of a computer Description automatically generated" />
 
-Se verifica que no hay problemas para finalizar el proceso (2), click en
-**FINISH and APPLY** (3)
+## **Actividad \# 4**
+
+### **Revisar el documento de configuración**
+
+Es posible ver la configuración establecida en el cluster en un archivo
+tipo **JSON**
+
+Seleccionar el cluster **SA-Compute-01**
+
+Click en la pestaña **Configure**, en la sección **Desired State** click
+en **Configuration**.
+
+En la sección de configuración, Click en la pestaña **Settings**
+
+Click the **EXPORT** para abrir un menú desplegable, seleccionar
+**Cluster**
+
+**Configuration.**
 
 <img src="./media/image38.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se confirma la aplicación al click **CONTINUE** (1)
+Click en **DOWNLOAD**.
 
 <img src="./media/image39.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se aplicado finalmente como configuración homogénea la configuración que
-se tomó del Host ESXi_01, click en **VIEW CONFIGURATION**
+Abra el folder **Downloads**.
+
+Revisar los detalles del archivo, click en **Save**.
+
+En la barra de tareas de Linux click en **Files**.
+
+Click en **Downloads**.
 
 <img src="./media/image40.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se muestra la configuración establecida en el cluster.
+Abrir con click derecho el archivo
+**export-settings-config-xxxxxxxxxx.json,** click en **Open with Text
+Editor**.
 
-<img src="./media/image41.png" style="width:6.5in;height:3.49375in"
+<img src="./media/image41.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-## **Tarea \# 4**
+Esto despliega el archive tipo **JSON**, para su revisión, y posible
+edición si se desea importar y aplicar al cluster
 
-### **Desviación de la configuración de un Host**
-
-Para mostrar la aplicación de la configuración de un cluster
-
-Crear un puerto vkernel en el host **ESXi_02** para desviarlo de la
-configuración homogénea e ilustrar como detectarlo y retornarlo a la
-configuración original
-
-En la vista de **Hosts & Clusters** (1), click en el **Host ESXi_02**
-(2), click en la pestaña **Configure** (3), click en **Virtual
-switches** (4), click en el Switch **vSwitch0** (5), Click en **ADD
-NETWORKING** (6)
-
-<img src="./media/image42.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image42.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
-
-Dejar opciones por default (1), click en **NEXT** (2)
-
-<img src="./media/image43.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Selecionar **Select an existing standard switch** (2), seleccionar el
-**vSwitch0** (3), **NEXT** (4)
-
-<img src="./media/image44.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Dejar opciones por default (1), click en **NEXT** (2)
-
-<img src="./media/image45.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Dejar opciones por default (1), click en **NEXT** (2)
-
-<img src="./media/image46.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Aceptar resumen **FINISH** (1)
-
-<img src="./media/image47.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Se agregó un puerto vKernel al host **ESXi_02**.
-
-## **Tarea \# 5**
-
-### **Retorno a la configuración preestablecida de un host modificado.**
-
-Evaluar si hay un host que no cumple con la configuración
-
-Click en el cluster **Production cluster** (1), click en **Configure**
-(2), click **Configuration** (3), click **Compliance** (4)
-
-<img src="./media/image48.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Click en **CHECK COMPLIANCE** (2), Se muestra como resultado que el host
-**ESXi_2** no cumple con la configuración,
-
-<img src="./media/image49.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Para retornar el host **Esxi_02** a la configuración original, click en
-**REMEDIATE** (1)
-
-<img src="./media/image50.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Se muestran las posibles implicaciones en un Pre-check, **NEXT** (1)
-
-<img src="./media/image51.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Click en **REMEDIATE** (1)
-
-<img src="./media/image52.png" style="width:6.5in;height:3.65625in"
-alt="A screenshot of a computer Description automatically generated" />
-
-Se anuncia que el retorno a la configuración fue un éxito (2) y los dos
-hosts se ven en compliance
-
-<img src="./media/image53.png" style="width:6.5in;height:3.65625in" />
-
-Si retorna a revisar el **vSwitch0** este ya no tendrá el puerto
-**vKernel** creado.
