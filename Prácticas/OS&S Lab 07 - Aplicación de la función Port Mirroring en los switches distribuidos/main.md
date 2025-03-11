@@ -1,31 +1,21 @@
-> # **VMware vSphere**
->
-> ## **Operación, Escalamiento y Seguridad**
->
-> ### **Versión 8**
->
-> #### **Guía de uso de laboratorio**
+# Práctica 7. Aplicación de la función Port Mirroring en los switches distribuidos
 
-## **Laboratorio \# 7**
+## Objetivos de la práctica:
+- Establecer las condiciones para realizar la captura de tráfico.
+- Configurar el switch distribuido para la captura de tráfico.
+- Realizar la captura de tráfico y comprobar la funcionalidad.
+- Retornar la configuración inicial del switch distribuido desde un respaldo.
 
-### **Aplicación de la función Port Mirroring en los switches distribuidos**
+## Duración aproximada: 
+- 40 minutos.
 
-#### Actividades a realizar:
-
-1.  Establecer las condiciones para realizar la captura de tráfico
-
-2.  Configurar el switch distribuido para la captura de tráfico
-
-3.  Realizar la captura de tráfico, comprobar la funcionalidad
-
-4.  Retornar la configuración inicial del switch distribuido desde un
-    respaldo
+## Instrucciones
 
 ## **Actividad \# 1**
 
 ### **Establecer las condiciones para realizar la captura de tráfico**
 
-Utilizar la liga de acceso proporcionada por su instructor
+Utilizar la liga de acceso proporcionada por su instructor.
 
 A manera de ejemplo:
 [**https://vlabs.v2s.us/lab**](https://vlabs.v2s.us/lab)
@@ -33,7 +23,7 @@ A manera de ejemplo:
 <img src="./media/image1.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Utilizar el usuario y contraseña que le proporcione su instructor
+Utilizar el usuario y contraseña que le proporcione su instructor.
 
 A manera de ejemplo
 
@@ -41,32 +31,31 @@ A manera de ejemplo
 >
 > Contraseña: `Arn0224!`
 >
-> Click en **Login**
+Dar clic en **Login**.
 >
-> Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a**
-> (1)
+Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
 > <img src="./media/image2.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
 
-Al entrar, en la siguiente interfaz proporcionar
+Al entrar, en la siguiente interfaz proporcionar:
 
 > Usuario: `student01`
 >
 > Contraseña: `VMware1!`
 
-Click en **OK**
+Dar lick en **OK**.
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-> Se obtiene acceso al escritorio remoto
+> Se obtiene acceso al escritorio remoto.
 >
 > <img src="./media/image4.png" style="width:6.5in;height:2.85276in"
 > alt="A screenshot of a computer Description automatically generated" />
 
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
-Client login interface**
+Client login interface.**
 
 User: `administrator@vsphere.local`
 
@@ -78,84 +67,81 @@ Click en **Login**
 alt="A screenshot of a computer Description automatically generated" />
 
 Para este ejercicio se utilizarán las VMS **Linux01** y **Linux02,** que
-están en el **cluster SA-Compute**
+están en el **cluster SA-Compute.**
 
-Encender la **VM Linux01**
+Encender la **VM Linux01.**
 
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Encender VM Linux02
+Encender la **VM Linux02.**
 
 <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen with a computer screen Description automatically generated" />
 
 La VM Linux01 se utilizará como destino para la operación de Port
-Mirroring
+Mirroring.
 
 Verificar que las VMs **Linux01** y **Linux02** están conectadas al port
 group del switch distribuido y operando en el mismo servidor.
 
-En la vista de **Hosts & Clusters** (1), click en la máquina **Linux01**
-(2), en el menú contextual seleccionar **Edit Settings** (3)
+En la vista de **Hosts & Clusters** (1), seleccionar la máquina **Linux01**
+(2) y en el menú contextual elegir **Edit Settings** (3).
 
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 El port group es **dpg-SA-Production**, y está en estado de
-**connected** (3), **CANCEL** (4)
+**connected** (3). **CANCEL** (4).
 
 <img src="./media/image9.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Inspeccionar que la VM **Linux02** tiene esa misma condición
+Inspeccionar que la VM **Linux02** tenga esa misma condición.
 
-En la vista de **Hosts & Clusters** (1), click en la máquina **Linux02**
-(2), en el menú contextual seleccionar **Edit Settings** (3)
+En la vista de **Hosts & Clusters** (1), seleccionar la máquina **Linux02**
+(2) y en el menú contextual elegir **Edit Settings** (3).
 
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 El port group es **dpg-SA-Production**, y está en estado de
-**connected** (2), **CANCEL** (3)
+**connected** (2). **CANCEL** (3).
 
 <img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Verificar que están operando en el mismo host **sa-esxi-06**
+Verificar que están operando en el mismo host **sa-esxi-06**.
 
 En la vista de **Hosts & Clusters** (1) seleccionar el **sa-esxi-06**
-(2), click en la pestaña **VMs** (3) y confirmar que están en el mismo
-host (4)
+(2). Dirigirse a la pestaña **VMs** (3) y confirmar que están en el mismo
+host (4).
 
 <img src="./media/image12.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Entrar a las consolas de ambas máquinas al seleccionarla, click en
-**Symmary**, click en **LAUNCH WEB CONSOLE**
+Entrar a las consolas de ambas máquinas, al seleccionarlas, dirigirse a la pestaña
+**Symmary**, y dar clic en **LAUNCH WEB CONSOLE**.
 
 <img src="./media/image13.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 En cada una de ellas proporcionar como user: `root` y el password
-`VMware1!`
+`VMware1!`.
 
 <img src="./media/image14.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Con los comandos
 
-`ip add` (1)
+`ip add` (1).
 
-`ip route` (3)
+`ip route` (3).
 
 Identificamos la dirección IP `172.20.11.116` (2) de la **VM Linux01**
-y su default **Gateway** `172.20.11.2` (4)
+y su default **Gateway** `172.20.11.2` (4).
 
-**NOTA: Es posible que en el Laboratorio se encuentren por su
-implementación direcciones IP diferentes, por ejemplo, de la red
-172.20.10.0 /24, ajustar los comandos según las salidas de estas
-instrucciones en las dos VM Linux01 y Linux02**
+> NOTA: Es posible que en el Laboratorio se encuentren por su implementación direcciones IP diferentes, por ejemplo, de la red 172.20.10.0 /24, ajustar los comandos según las salidas de estas instrucciones en las dos VM Linux01 y Linux02.
 
 <img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
