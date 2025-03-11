@@ -21,8 +21,8 @@ Utilizar la liga de acceso proporcionada por su instructor.
 A manera de ejemplo:
 [**https://vlabs.v2s.us/lab**](https://vlabs.v2s.us/lab)
 
-> <img src="./media/image1.png" style="width:6.5in;height:3.49375in"
-alt="A screenshot of a computer Description automatically generated" />
+> <img src="./media/image1.png" style="width:6.5in;height:3.49375in">
+> alt="A screenshot of a computer Description automatically generated" />
 
 Utilizar el usuario y contraseña que le proporcione su instructor.
 
