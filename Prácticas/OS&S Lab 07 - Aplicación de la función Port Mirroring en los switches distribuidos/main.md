@@ -180,7 +180,8 @@ capturar tráfico de ICMP.
 
 `sudo tcpdump -nn icmp`
 
-Se emite el comando y al esperar un tiempo se ve que no se recibe
+Se emite el comando y, al esperar un tiempo,
+se ve que no se recibe
 tráfico, así estará hasta recibir tráfico de ICMP en su puerto.
 
 <img src="./media/image20.png" style="width:6.5in;height:3.65625in"
@@ -218,28 +219,24 @@ Dejar seleccionada la opción **Distributed Port Mirroring** (2).
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-En el paso **Edit Properties,** configurar.
-
-Configurar en **Status** la opción **Enabled** (2), adicionalmente en la
-opción **Normal I/O on destination Ports** establecer **Allowed** (3),
-**NEXT** (4)
+En el paso **Edit Properties,** configurar en **Status** la opción **Enabled** (2). Adicionalmente, en la opción **Normal I/O on destination Ports**, establecer **Allowed** (3). **NEXT** (4).
 
 <img src="./media/image25.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la selección del puerto origen establecer el host **sa-esxi-06** con
-la **VM Linux01** (2), **NEXT**(3)
+la **VM Linux01** (2). **NEXT**(3).
 
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la selección del puerto destino establecer el host **sa-esxi-06** con
-la **VM Linux02** (2), **NEXT**(3)
+la **VM Linux02** (2). **NEXT**(3).
 
 <img src="./media/image27.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se despliega la configuración, aceptar **FINISH** (1)
+Se despliega la configuración, aceptar. **FINISH** (1).
 
 <img src="./media/image28.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
@@ -248,21 +245,21 @@ alt="A computer screen shot of a computer screen Description automatically gener
 
 ### **Realizar la captura de tráfico, comprobar la funcionalidad**
 
-Ya se tiene una sesión de mirroring y en la **VM Linux02** se empieza a
-recibir paquetes de ICMP lo que inicia la captura observar el origen y
-destino de los paquetes (1)
+Ya se tiene una sesión de mirroring y en la **VM Linux02** se empiezan a
+recibir paquetes de ICMP, lo que inicia la captura para observar el origen y
+destino de los paquetes (1).
 
 <img src="./media/image29.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Para retornar a las condiciones iniciales antes de la captura, terminar
-el proceso en la **VM** **Linux02**, se muestra la cantidad de paquetes
-capturados
+el proceso en la **VM** **Linux02**. Se muestra la cantidad de paquetes
+capturados.
 
 <img src="./media/image30.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Terminar el ping en la **VM Linux01**
+Terminar el ping en la **VM Linux01**.
 
 <img src="./media/image31.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -272,46 +269,46 @@ alt="A screenshot of a computer Description automatically generated" />
 **Retornar la configuración inicial del switch distribuido desde un
 respaldo**
 
-Terminar la sesión de mirroring en el switch retornando el switch a su
+Terminar la sesión de mirroring en el switch, retornando el switch a su
 configuración original respaldada en un archivo en un laboratorio
-anterior
+anterior.
 
 En la vista de **Network** (1) seleccionar el switch **vds-Production**
-(2), en el menú contextual seleccionar **Settings** (3), click en
-**Restore Configuration** (4)
+(2) y en el menú contextual escoger **Settings** (3). Dar click en
+**Restore Configuration** (4).
 
 <img src="./media/image32.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Click en la opción **BROWSE** (1) para buscar el archivo de respaldo
+Seleccionar la opción **BROWSE** (1) para buscar el archivo de respaldo.
 
 <img src="./media/image33.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Seleccionar el archivo de **Backup** (2), **OPEN** (2)
+Seleccionar el archivo de **Backup** (2). **OPEN** (2).
 
 <img src="./media/image34.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Aparece el nombre de archivo de respaldo (1), dejar la opción **Restore
-Distributed switch and all port groups,** **NEXT** (3)
+Aparece el nombre del archivo de respaldo (1). Dejar la opción **Restore
+Distributed switch and all port groups**. **NEXT** (3).
 
 <img src="./media/image35.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Aceptar la configuración, **FINISH** (1)
+Aceptar la configuración. **FINISH** (1).
 
 <img src="./media/image36.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Verificar que el Switch está en las condiciones iniciales sin una sesión
-de mirroring
+de mirroring.
 
 En la vista de **Network** (1) seleccionar el switch **vds-Production**
-(2), click en la pestaña **Configure** (3), en la sección de
-**Settings** seleccionar **Port Mirroring** (4)
+(2). Dirigirse a la pestaña **Configure** (3)y en la sección de
+**Settings** seleccionar **Port Mirroring** (4).
 
-Ya no se ven sesiones operando (5)
+Ya no se ven sesiones operando (5).
 
 <img src="./media/image37.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
