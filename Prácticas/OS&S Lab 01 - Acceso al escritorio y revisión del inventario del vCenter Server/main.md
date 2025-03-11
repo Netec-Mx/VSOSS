@@ -45,7 +45,7 @@ Al entrar, en la siguiente interfaz proporcionar:
 >
 > Contraseña: `VMware1!`
 
-Clic en **OK**
+Clic en **OK**.
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -62,7 +62,7 @@ User: `administrator@vsphere.local`
 
 Password: `VMware1!`
 
-Clic en **Login**
+Clic en **Login**.
 
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -72,7 +72,7 @@ alt="A screenshot of a computer Description automatically generated" />
 ### **Acceso al vCenter Server**
 
 Abrir una instancia del browser Firefox con acceso directo al vSphere
-Client login interface
+Client login interface.
 
 User: `administrator@vsphere.local`
 
