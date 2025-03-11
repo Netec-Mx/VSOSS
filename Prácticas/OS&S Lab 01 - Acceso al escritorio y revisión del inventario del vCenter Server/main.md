@@ -1,12 +1,12 @@
 # Práctica 1. Acceso al escritorio y revisión del inventario del vCenter Server
 
-# Objetivos de la práctica:
+## Objetivos de la práctica:
 - Acceder al escritorio remoto.
 - Acceder al vCenter Server.
 - Revisar el inventario del datacenter.
 - Revisar el estado de licenciamiento de los hots y del vCenter Server.
 
-# Duración aproximada
+## Duración aproximada
 - 30 minutos.
   
 > Versión 8
