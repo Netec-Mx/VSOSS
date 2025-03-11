@@ -34,10 +34,9 @@ A manera de ejemplo:
 >
 > Clic en **Login**
 >
-> Seleccionar en esta interfaz el primer Pod de trabajo **vPodProd001a**.
-> (1)
->
-> <img src="./media/image2.png" style="width:6.5in;height:3.65625in"
+Seleccionar en esta interfaz el primer Pod de trabajo **vPodProd001a** (1).
+
+<img src="./media/image2.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
 
 Al entrar, en la siguiente interfaz proporcionar:
