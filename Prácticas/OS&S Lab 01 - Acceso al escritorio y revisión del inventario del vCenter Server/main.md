@@ -6,7 +6,7 @@
 - Revisar el inventario del datacenter.
 - Revisar el estado de licenciamiento de los hots y del vCenter Server.
 
-## Duración aproximada
+## Duración aproximada:
 - 30 minutos.
   
 > Versión 8
