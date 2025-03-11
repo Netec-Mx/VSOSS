@@ -141,58 +141,58 @@ Con los comandos
 Identificamos la dirección IP `172.20.11.116` (2) de la **VM Linux01**
 y su default **Gateway** `172.20.11.2` (4).
 
-> NOTA: Es posible que en el Laboratorio se encuentren por su implementación direcciones IP diferentes, por ejemplo, de la red 172.20.10.0 /24, ajustar los comandos según las salidas de estas instrucciones en las dos VM Linux01 y Linux02.
+> ****NOTA: Es posible que en el Laboratorio se encuentren por su implementación direcciones IP diferentes, por ejemplo, de la red 172.20.10.0 /24, ajustar los comandos según las salidas de estas instrucciones en las dos VM Linux01 y Linux02.****
 
 <img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Hacemos ping a la dirección del default Gateway `172.20.11.2`
+Hacemos ping a la dirección del default Gateway `172.20.11.2`.
 
 <img src="./media/image16.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-De forma similar en la **VM Linux02** averiguamos la IP
-`172.20.11.115` (2) y default Gateway
+De forma similar en la **VM Linux02**, averiguamos la IP
+`172.20.11.115` (2) y default Gateway.
 
-`ip add` (1)
+`ip add` (1).
 
-`ip route` (3)
+`ip route` (3).
 
 <img src="./media/image17.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Ping al default Gateway `172.20.11.2`
+Ping al default Gateway `172.20.11.2`.
 
 <img src="./media/image18.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Adicionalmente hacemos ping a la **VM Linux01**(1) con dirección
-`172.20.11.116`, con resultado exitoso (2)
+`172.20.11.116`, con resultado exitoso (2).
 
 <img src="./media/image19.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En esta preparación la **Linux02** será el destino de la captura de
-tráfico que se configurará en el Switch distribuido
+tráfico que se configurará en el switch distribuido.
 
-Para esto en el SO de la **VM Linux02** usaremos el comando para
-capturar tráfico de ICMP
+Para esto, en el SO de la **VM Linux02**, usaremos el comando para
+capturar tráfico de ICMP.
 
 `sudo tcpdump -nn icmp`
 
 Se emite el comando y al esperar un tiempo se ve que no se recibe
-tráfico, así estará hasta recibir tráfico de ICMP en su puerto
+tráfico, así estará hasta recibir tráfico de ICMP en su puerto.
 
 <img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la **VM Linux01** emitir el comando `ping 172.20.11.2` (1) al
-default Gateway con resultado exitoso (2)
+En la **VM Linux01**, emitir el comando `ping 172.20.11.2` (1) al
+default Gateway con resultado exitoso (2).
 
 <img src="./media/image21.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la VM2 no se ven cambios
+En la VM2 no se ven cambios.
 
 <img src="./media/image22.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -201,24 +201,24 @@ alt="A screenshot of a computer Description automatically generated" />
 
 ### **Configurar el switch distribuido para la captura de tráfico**
 
-El tráfico que se genera en el **VM Linux01** se reflejará en el puerto
+El tráfico que se genera en la **VM Linux01** se reflejará en el puerto
 de la **VMLinux_02** en una sesión de mirroring que se establecerá en el
-switch
+switch.
 
-En la vista de **Network** (1) seleccionar el switch **vds Production**
-(2), click en la pestaña **Configure** (3), en la sección de
-**Settings** seleccionar **Port Mirroring** (4), click en **NEW** (5)
+En la vista de **Network** (1), seleccionar el switch **vds Production**
+(2). Dirigirse a la pestaña **Configure** (3) y en la sección de
+**Settings** seleccionar **Port Mirroring** (4). Dar clic en **NEW** (5).
 
 <img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Dejar seleccionada la opción **Distributed Port Mirroring** (2),
-**NEXT** (3)
+Dejar seleccionada la opción **Distributed Port Mirroring** (2).
+**NEXT** (3).
 
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-En el paso **Edit Properties,** configurar
+En el paso **Edit Properties,** configurar.
 
 Configurar en **Status** la opción **Enabled** (2), adicionalmente en la
 opción **Normal I/O on destination Ports** establecer **Allowed** (3),
