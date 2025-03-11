@@ -1,6 +1,6 @@
 # Práctica 2. Compartir en forma centralizada los VMware VMtools
 
-## Objetivos de la práctica.
+## Objetivos de la práctica:
 - Ver el valor por default de la ubicación de las VMtools.
 - Modificar la variable avanzada de ubicación de las VMtools.
 - Usar una API para actualizar el Symlink del SO que apunta a las VMtools.
@@ -9,7 +9,7 @@
 ## Duración aproximada:
 - 50 minutos.
 
-> ### **Versión 8**
+> Versión 8
 
 
 ## Instrucciones
