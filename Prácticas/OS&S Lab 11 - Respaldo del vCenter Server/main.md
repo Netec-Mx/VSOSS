@@ -1,13 +1,13 @@
 # Práctica 11. Respaldo del vCenter Server 
 
-## Objetivos de la práctica_
+## Objetivos de la práctica:
 
 - Acceso a la consola de administración del vCenter Server.
 - Examinar las opciones para respaldos programados e inmediatos.
 - Lanzar un proceso de respaldo del vCenter Server.
 - Visualizar la opción de restauración de un backup con la aplicación Install.
 
-## Duración aproximada
+## Duración aproximada:
 - 30 minutos.
 
 ## Instrucciones
