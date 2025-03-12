@@ -1,29 +1,19 @@
-> # **VMware vSphere**
->
-> ## **Operación, Escalamiento y Seguridad**
->
-> ### **Versión 8**
->
-> #### **Guía de uso de laboratorio**
+# Práctica 13. Trabajo con certificados 
 
-## **Laboratorio \# 13**
+## Objetivos de la práctica:
 
-### **Trabajo con Certificados**
+- Examinar el certificado SSL de una máquina virtual.
+- Generar una solicitud de firma de certificado.
+- Reemplazar un certificado SSL de la máquina por un certificado de CA pregenerado.
 
-#### Actividades por realizar:
-
-1.  Examinar el certificado SSL de una Máquina Virtual
-
-2.  Generar una solicitud de firma de certificado
-
-3.  Reemplazar un certificado SSL de la máquina por un certificado de CA
-    pregenerado
+## Duración aproximada
+- 30  minutos.
 
 ## **Actividad \# 1**
 
-### **Examinar el certificado SSL de una Máquina Virtual**
+### **Examinar el certificado SSL de una máquina virtual**
 
-Utilizar la liga de acceso proporcionada por su instructor
+Utilizar la liga de acceso proporcionada por su instructor.
 
 A manera de ejemplo:
 [**https://vlabs.v2s.us/lab**](https://vlabs.v2s.us/lab)
@@ -31,9 +21,9 @@ A manera de ejemplo:
 <img src="./media/image1.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Utilizar el usuario y contraseña que le proporcione su instructor
+Utilizar el usuario y contraseña que le proporcione su instructor.
 
-A manera de ejemplo
+A manera de ejemplo:
 
 > Usuario: `student01a`
 >
@@ -41,30 +31,29 @@ A manera de ejemplo
 >
 > Click en **Login**
 >
-> Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a**
-> (1)
+Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
 > <img src="./media/image2.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
 
-Al entrar, en la siguiente interfaz proporcionar
+Al entrar, en la siguiente interfaz proporcionar:
 
 > Usuario: `student01`
 >
 > Contraseña: `VMware1!`
 
-Click en **OK**
+Dar clic en **OK**.
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-> Se obtiene acceso al escritorio remoto
+> Se obtiene acceso al escritorio remoto.
 >
 > <img src="./media/image4.png" style="width:6.5in;height:2.85276in"
 > alt="A screenshot of a computer Description automatically generated" />
 
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
-Client login interface**
+Client login interface.**
 
 User: `administrator@vsphere.local`
 
@@ -80,20 +69,20 @@ garantizar la confidencialidad e integridad de los datos que se
 intercambian entre los componentes de vCenter y otras entidades en la
 infraestructura de VMware.
 
-En el menú principal, seleccionar **Administration** (2)
+En el menú principal, seleccionar **Administration** (2).
 
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la sección **Certificates**, click en **Certificates Managment**
-(2)**,** en la sección **Machine SSL Certificate** (3), seleccionar
-**VIEW DETAILS** (4)
+En la sección **Certificates**, seleccionar **Certificates Managment**
+(2). En la sección **Machine SSL Certificate** (3), seleccionar
+**VIEW DETAILS** (4).
 
 <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra la información del certificado que sería similar a la que se
-muestra
+muestra.
 
 <img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -108,42 +97,43 @@ Valid Until: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 Thumbprint:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-La huella digital del certificado (**Thumbprint**), también llamada hash
-de certificado, es única y cambia con cada certificado generado.
+La huella digital del certificado (**Thumbprint**), también llamada **hash
+de certificado**, es única y cambia con cada certificado generado.
 
-Al terminar de revisar el certificado SSL de máquina, click en **BACK
-TO**
+Al terminar de revisar el certificado SSL de máquina, dar clic en **BACK
+TO.**
 
 **CERTIFICATE MANAGEMENT** (1)
 
 <img src="./media/image9.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Click en **VIEW DETAILS** (2) para el primer certificado en la sección
-**Trusted Root Certificates** (1)
+Dar clic en **VIEW DETAILS** (2) para el primer certificado en la sección
+**Trusted Root Certificates** (1).
 
 <img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Observar que el certificado fue emitido por **CA,** que indica que
-VMware CA emitió el certificado. CA se refiere a la VMCA en vCenter
+VMware CA emitió el certificado. 
+> CA se refiere a la VMCA en vCenter
 
-Click en **BACK TO CERTIFICATE MANAGEMENT**
+Dar clic en **BACK TO CERTIFICATE MANAGEMENT.**
 
 ## **Actividad \#2**
 
 ### **Crear una solicitud de firma de certificado**
 
-Utilice **vSphere Certificate Manager** para crear una solicitud de
+Utilizar **vSphere Certificate Manager** para crear una solicitud de
 firma de certificado (**CSR**) que usará para solicitar un certificado
 personalizado firmado por la autoridad de certificación (CA) del
 controlador de dominio para el laboratorio.
 
 Generar la solicitud de firma de certificado (**Certificate signing
-request CSR**).
+request CSR**) (1).
 
-En el recuadro **Machine SSL Certificate** (2), click en **Actions**
-(3), click en **Generate Certificate Signing Request (CSR)** (4)
+En el recuadro **Machine SSL Certificate** (2), seleccionar **Actions**
+(3). Hacer clic en **Generate Certificate Signing Request (CSR)** (4).
 
 <img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -162,12 +152,12 @@ certificado.
 
 Dejar todos los demás campos como predeterminados.
 
-Click en **NEXT** (1).
+**NEXT** (1).
 
 <img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Click en **FINISH** (1) para cerrar el asistente.
+Hacer clic en **FINISH** (1) para cerrar el asistente.
 
 <img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -182,39 +172,36 @@ Importar y reemplazar el certificado autofirmado (**self-signed
 certificate)** de VMware CA con un certificado firmado por una entidad
 certificadora externa mediante vSphere Client.
 
-En el menú principal (1), seleccionar **Administration** (2), en la
-sección **Certificates** (3), seleccionar **Certificate Management**
-(4). En la sección **Machine SSL Certificate** (5), click en **ACTIONS**
-(6), click en **Import and Replace Certificate** (7)
+En el menú principal (1), seleccionar **Administration** (2). En la
+sección **Certificates** (3) elegir **Certificate Management** (4). 
+En la sección **Machine SSL Certificate** (5), hacer clic en **ACTIONS**
+(6) y después en **Import and Replace Certificate** (7).
 
 <img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
-Se iniciará el asistente
+Se iniciará el asistente.
 
 En la página **Choose apropriate option** (1) seleccionar **Replace with
-external CA certificate (requires private key)** (2). Click en **NEXT**
-(3)
+external CA certificate (requires private key)** (2). **NEXT** (3).
 
 <img src="./media/image15.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En el campo **Machine SSL Certificate** (2), click **BROWSE FILE** (3).
+En el campo **Machine SSL Certificate** (2) hacer clic en **BROWSE FILE** (3).
 
 <img src="./media/image16.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
-
-Seleccionar **ca_vcsa.crt** (4), dar click en **OPEN** (5)
+En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**, seleccionar **ca_vcsa.crt** (4). **OPEN** (5).
 
 <img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Después de seleccionar este archivo, el cuadro de texto se completará
-con la información del certificado firmado por la entidad certificadora.
+con la información del certificado firmado por la entidad encargada de la certificación.
 
-En el cuadro **Chain of trusted root certificates**, seleccionar
+En el cuadro **Chain of trusted root certificates**, hacer clic en
 **BROWSE FILE** (3).
 
 <img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
@@ -222,19 +209,17 @@ alt="A screenshot of a computer Description automatically generated" />
 
 En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
 
-seleccionar **RootCA.crt** (4), click en **OPEN** (5)
+seleccionar **RootCA.crt** (4). **OPEN** (5).
 
 <img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Después de seleccionar este archivo, el cuadro de texto se completará
-con la información del certificado raíz
+con la información del certificado raíz.
 
-En el cuadro **Private Key,** click en **BROWSE FILE**
+En el cuadro **Private Key,** hacer clic en **BROWSE FILE.**
 
-En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**,
-
-seleccionar el archivo **vmca_issued_key.key**, click en **OPEN**.
+En la carpeta **/Desktop/Class Materials and Licenses/linux_CA**, seleccionar el archivo **vmca_issued_key.key**, click en **OPEN**.
 
 Después de seleccionar este archivo, el cuadro de texto se llenará con
 la información de la Clave privada.
