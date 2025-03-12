@@ -404,50 +404,44 @@ La asignación de una política de almacenamiento se realiza sin importar
 el estado de energía de una VM y se utiliza para asegurar el desempeño
 en términos de su operación en el almacenamiento.
 
-Seleccionar la vista de **Hosts & Clusters**
-
-Dar click derecho en la VM **Photon-01**
-
-Seleccionar **VM Policies**, click en **Edit VM Storage Policies**
+Seleccionar la vista de **Hosts & Clusters** (1). Dar clic derecho en la VM **Photon-01** (2) y seleccionar **VM Policies** (3). Elegir **Edit VM Storage Policies.**
 
 <img src="./media/image51.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Desde el menú desplegable **VM storage policy**, seleccionar **Gold Tier
-Policy**, click en **OK**
+Desde el menú desplegable **VM storage policy** (1), seleccionar **Gold Tier
+Policy** (2). **OK** (3).
 
 <img src="./media/image52.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Asegurarse que se asignó la política al dar click en la VM **Photon-01**
-click en **Summary**, desplazarse a la sección de **Storage Policies** y
-ver la asignación.
+Asegurarse que se asignó la política al dar click en la VM **Photon-01** (1).
+Dirigirse a la pestaña **Summary** (2), desplazarse a la sección de **Storage Policies** (3) y ver la asignación.
 
 La VM cumple (**compliant**) con la política porque migramos los
-archivos a este datastore
+archivos a este datastore (5).
 
 <img src="./media/image53.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Aplicar la política **Silver Tier** a la VM **Photon-02**
+Aplicar la política **Silver Tier** a la VM **Photon-02.**
 
-Seleccionar la vista de **Hosts & Clusters**
+Seleccionar la vista de **Hosts & Clusters.**
 
-Dar click derecho en la VM **Photon-02**
+Dar click derecho en la VM **Photon-02.**
 
-Seleccionar **VM Policies**, click en **Edit VM Storage Policies**
+Seleccionar **VM Policies**, dar clic en **Edit VM Storage Policies.**
 
-Desde el menú desplegable **VM storage policy**, seleccionar **Silver
-Tier Policy**, click en **OK**
+Desde el menú desplegable **VM storage policy** (1), seleccionar **Silver
+Tier Policy** (2). **OK** (3).
 
 <img src="./media/image54.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Asegurarse que se asignó la política al dar click en la VM
-**Photon-02,** click en **Summary**, desplazarse a la sección de
-**Storage Policies** y ver la asignación.
+Asegurarse que se asignó la política al dar clic en la VM
+**Photon-02** (1). Dirigirse a la pestaña de **Summary** (2), desplazarse a la sección de **Storage Policies** (3) y ver la asignación.
 
-La VM no cumple (**no compliant**) con la política, porque migramos los
+La VM no cumple (**no compliant**) con la política (5), porque migramos los
 archivos a este datastore que no está incluido en esta política.
 
 <img src="./media/image55.png" style="width:6.5in;height:3.65625in"
@@ -456,13 +450,12 @@ alt="A screenshot of a computer Description automatically generated" />
 Para corregir esta condición de no cumplimiento con la política migremos
 la VM al datastore correcto.
 
-Seleccionar la VM **Photon-02**, click derecho, seleccionar **Migrate**
+Seleccionar la VM **Photon-02** (2), dar clic derecho, seleccionar **Migrate** (3).
 
 <img src="./media/image56.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En página **Select a migration type,** click en **Change storage only**,
-click en **NEXT**
+En la página **Select a migration type** (1), dar clic en **Change storage only** (2). **NEXT** (3).
 
 <img src="./media/image57.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -472,17 +465,16 @@ En la página **Select Storage Silver** click en **NEXT**
 <img src="./media/image58.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-En la página **Ready to Complete**. Click en **FINISH**
+En la página **Ready to Complete**. **FINISH**.
 
 <img src="./media/image59.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Esperar a que se lleve a cabo la migración
+Esperar a que se lleve a cabo la migración.
 
-Con la VM **Photon-02** seleccionada, click en **Summary**, desplazarse
-a la sección de **Storage Policies** y ver que la VM cumple
+Con la VM **Photon-02** seleccionada (2), dirigirse a la pestaña **Summary** (2), desplazarse a la sección de **Storage Policies** (3) y ver que la VM cumple
 (**compliant**) con la política porque migramos los archivos de la misma
-al datastore correspondiente a esta política.
+al datastore correspondiente a esta política (5).
 
 <img src="./media/image60.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
