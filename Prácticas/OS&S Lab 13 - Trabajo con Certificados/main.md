@@ -229,29 +229,26 @@ Clic en **NEXT**.
 <img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **System Backup**, seleccionar la opción de verificación
-**Backup acknowledgment**, click en **NEXT**.
+En la página **System Backup** (1), seleccionar la opción de verificación
+**Backup acknowledgment** (2). **NEXT** (3).
 
 <img src="./media/image21.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Review**, click en **FINISH**.
+En la página **Review** (1), dar clic en **FINISH** (2).
 
 <img src="./media/image22.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Después de unos segundos, debería aparecer un cuadro de mensaje que
-indique que se ha
+indique que se ha cambiado el certificado.
 
-cambiado el certificado.
+Dar clic en **UPDATE**.
 
-Click en **UPDATE**.
-
-En una nueva pestaña de **Firefox**, abrir el menú Firefox y seleccionar
-**Settings**.
+En una nueva pestaña de **Firefox**, abrir el menú y seleccionar **Settings**.
 
 Alternativamente, puede abrir una nueva pestaña del navegador Firefox e
-ingresar
+ingresar:
 
 `about:preferences` en el **campo de dirección**.
 
@@ -260,27 +257,23 @@ Buscar la sección de **Cookies**
 <img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Click en **Clear data**, anular la selección de **Cookies and Site
-Data,** click en **Clear**.
+Seleccionar **Clear data** y anular la selección de **Cookies and Site
+Data**. Dar clic en **Clear**.
 
 <img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Esta acción borrará la memoria caché web de su navegador Firefox.
 
-Reinicie su navegador Firefox.
+1. Reiniciar el navegador Firefox.
 
-Verifique el reemplazo del certificado.
+2. Verificar el reemplazo del certificado.
 
-Con vSphere Client, inicie sesión en la instancia de vCenter
-**sa-vcsa-01.vclass.local** usando
-
-sus credenciales de laboratorio de vCenter.
+Con vSphere Client, iniciar sesión en la instancia de vCenter
+**sa-vcsa-01.vclass.local** usando sus credenciales de laboratorio de vCenter.
 
 Si recibe el mensaje de **Warning: Potential Security Risk Ahead** en su
-session de Firefox
-
-de click en **Advanced**
+session de Firefox, dar click en **Advanced.**
 
 <img src="./media/image25.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -292,18 +285,14 @@ Si no es posible iniciar sesión en vCenter después de que se hayan
 reiniciado los servicios, intentar iniciar sesión con una nueva ventana
 privada de Firefox.
 
-En el menú principal, seleccione **Administration** seleccione
-**Certificate Management** en la sección **Certificates**.
-
-En el recuadro **Machine SSL Certificate**, click en **VIEW DETAILS**.
+En el menú principal, seleccionar **Administration** (2). Elegir
+**Certificate Management** en la sección **Certificates** (4). En el recuadro **Machine SSL Certificate**, hacer clic en **VIEW DETAILS**.
 
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Registre la siguiente información del certificado y compare las fechas
-válidas y la huella digital
-
-con la información del certificado recopilada en una tarea anterior.
+Registrar la siguiente información del certificado y comparar las fechas
+válidas y la huella digital con la información del certificado recopilada en una tarea anterior.
 
 Valid from: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
