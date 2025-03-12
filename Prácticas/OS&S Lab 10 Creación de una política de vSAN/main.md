@@ -1,4 +1,4 @@
-# Práctica 10. Creación de una política de vSAN >
+# Práctica 10. Creación de una política de vSAN 
 
 ## Objetivos de la práctica:
 
