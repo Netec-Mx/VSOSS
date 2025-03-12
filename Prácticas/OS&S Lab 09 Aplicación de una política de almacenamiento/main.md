@@ -1,34 +1,23 @@
-> # **VMware vSphere**
->
-> ## **Operación, Escalamiento y Seguridad**
->
-> ### **Versión 8**
->
-> #### **Guía de uso de laboratorio**
+# Práctica 9. Aplicación de una política de almacenamiento
 
-## **Laboratorio \# 9**
+## Objetivos de la práctica:
 
->###  **Aplicación de una política de almacenamiento**
+- Agregar datastores para que los use el almacenamiento basado en políticas.
+- Usar vSphere Storage vMotion para migrar el almacenamiento de máquinas virtuales
+- Configurar etiquetas de almacenamiento.
+- Crear políticas de almacenamiento para máquinas virtuales.
+- Asignar políticas de almacenamiento a las máquinas virtuales.
 
-#### **Actividades por realizar:**
+## Duración aproximada:
+- 30 minutos.
 
-> **1. Agregar datastores para que los use el almacenamiento basado en
-> políticas**
->
-> **2. Use vSphere Storage vMotion para migrar el almacenamiento de
-> máquinas virtuales**
->
-> **3. Configurar etiquetas de almacenamiento**
->
-> **4. Crear Políticas de almacenamiento para máquinas virtuales**
->
-> **5. Asignar políticas de almacenamiento a las máquinas virtuales**
+## Instrucciones
 
 ## **Actividad \# 1**
 
 ### **Agregar almacenes de datos para que los use el almacenamiento basado en políticas**
 
-Utilizar la liga de acceso proporcionada por su instructor
+Utilizar la liga de acceso proporcionada por su instructor.
 
 A manera de ejemplo:
 [**https://vlabs.v2s.us/lab**](https://vlabs.v2s.us/lab)
@@ -36,60 +25,59 @@ A manera de ejemplo:
 <img src="./media/image1.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Utilizar el usuario y contraseña que le proporcione su instructor
+Utilizar el usuario y contraseña que le proporcione su instructor.
 
-A manera de ejemplo
+A manera de ejemplo:
 
 > Usuario: `student01a`
 >
 > Contraseña: `Arn0224!`
 >
-> Click en **Login**
+> Dar clic en **Login**.
 >
-> Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a**
-> (1)
+Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
 > <img src="./media/image2.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
 
-Al entrar, en la siguiente interfaz proporcionar
+Al entrar, en la siguiente interfaz proporcionar:
 
 > Usuario: `student01`
 >
 > Contraseña: `VMware1!`
 
-Click en **OK**
+Dar clic en **OK**.
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-> Se obtiene acceso al escritorio remoto
+> Se obtiene acceso al escritorio remoto.
 >
 > <img src="./media/image4.png" style="width:6.5in;height:2.85276in"
 > alt="A screenshot of a computer Description automatically generated" />
 
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
-Client login interface**
+Client login interface.**
 
 User: `administrator@vsphere.local`
 
 Password: `VMware1!`
 
-Click en **Login**
+Dar click en **Login**.
 
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En el menú principal, seleccione **Inventory**, click en la vista de
+En el menú principal, seleccionar **Inventory**, dar clic en la vista de
 **DataStorages**.
 
 <img src="./media/image6.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Crear un almacén de datos denominado **ds-gold**
+Crear un almacén de datos denominado **ds-gold**.
 
-En el panel de navegación, click con el botón derecho en
-**SA-Datacenter** y seleccionar **Storage**, click en **New Datastore**.
+En el panel de navegación, dar clic con el botón derecho en
+**SA-Datacenter** (2) y seleccionar **Storage** (3), escoger **New Datastore** (4).
 
 > <img src="./media/image7.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
@@ -99,38 +87,37 @@ Aparece el asistente **New Datastorage**.
 <img src="./media/image8.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Type**, dejar **VMFS** seleccionado y hacer click en
-**NEXT**.
+En la página **Type** (1), dejar **VMFS** seleccionado (2) y hacer clic en
+**NEXT** (3).
 
 <img src="./media/image9.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Name and device Selection**, ingrese **ds-gold** en el
-cuadro de texto **Name**.
+En la página **Name and device Selection** (1), ingresar **ds-gold** en el
+cuadro de texto **Name** (2).
 
 En el menú desplegable **Select a host**, seleccionar ESXi host
-**sa-esxi-04.vclass.local**
+**sa-esxi-04.vclass.local** (3).
 
 En la lista de LUNs, seleccionar **LUN 7** con la descripción de entrada
-FreeNAS ISCSI Disk (naa..) y capacidad **8.00 GB**, click en **NEXT**.
+FreeNAS ISCSI Disk (naa..) y capacidad **8.00 GB** (4). **NEXT** (5).
 
 <img src="./media/image10.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **VMFS version**, dejar **VMFS 6** seleccionado y hacer
-click en **NEXT**.
+En la página **VMFS version** (1), dejar **VMFS 6** seleccionado (2). **NEXT** (3).
 
 <img src="./media/image11.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Partition configuration**, mantener los valores
-predeterminados, click en **NEXT**.
+predeterminados (1). **NEXT** (2).
 
 <img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Ready to complete,** para terminar, revise la
-configuración, click en **FINISH**.
+En la página **Ready to complete,** para terminar, revisar la
+configuración. **FINISH** (1).
 
 <img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -139,109 +126,107 @@ En el panel de tareas recientes, verificar que la tarea se haya
 terminado.
 
 Verificar que el almacén de datos **ds-gold** aparezca en el panel de
-navegación.
+navegación (1).
 
 <img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Crear un datastore llamado **ds-silver**.
 
-En el panel de navegación, click con el botón derecho en
-**SA-Datacenter** y seleccionar **Storage**, click en **New datastore**.
+En el panel de navegación (1), dar clic con el botón derecho en
+**SA-Datacenter** (2) y seleccionar **Storage** (3), escoger **New datastore** (4).
 
 <img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Aparece el asistente **New datastore**.
 
-En la página **Type**, dejar **VMFS** seleccionado, click en **NEXT**.
+En la página **Type** (1), dejar **VMFS** seleccionado (2). **NEXT** (3).
 
 <img src="./media/image16.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a message Description automatically generated" />
 
-En la página **Name and device selection**, ingresar **ds-silver** en el
-campo **Name**.
+En la página **Name and device selection** (1), ingresar **ds-silver** en el
+campo **Name** (2).
 
 En el menú desplegable **Select a host**, seleccionar ESXi host
-**sa-esxi-04.vclass.local**.
+**sa-esxi-04.vclass.local** (3).
 
 En la lista de LUNs, seleccionar **LUN 8** con la descripción de entrada
-FreeNAS ISCSI Disk (naa..) y capacidad **12.00 GB**, click en **NEXT**.
+FreeNAS ISCSI Disk (naa..) y capacidad **12.00 GB** (4). **NEXT** (5).
 
 <img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **VMFS version**, dejar **VMFS 6** seleccionado, click en
-**NEXT**.
+En la página **VMFS version** (1), dejar **VMFS 6** seleccionado (2). **NEXT** (3).
 
 <img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Partition configuration**, mantener los valores
-predeterminados, click en **NEXT**.
+En la página **Partition configuration** (1), mantener los valores
+predeterminados. **NEXT** (2).
 
 <img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Ready to complete**, revisar la configuración, click en
-**FINISH**.
+En la página **Ready to complete** (1), revisar la configuración. **FINISH** (2).
 
 <img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En el panel tareas recientes, verificar que se haya terminado la tarea.
+En el panel de tareas recientes, verificar que se haya terminado la tarea.
 
 Verificar que el almacén de datos **ds-silver** aparezca en el panel de
-navegación
+navegación.
 
 <img src="./media/image21.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 2**
 
-### **Use vSphere Storage vMotion para migrar el almacenamiento de máquinas virtuales**
+### **Usar vSphere Storage vMotion para migrar el almacenamiento de máquinas virtuales**
 
-Utilice **vSphere Storage vMotion** para migrar la máquina virtual
+Utilizar **vSphere Storage vMotion** para migrar la máquina virtual
 **Photon-01** al almacén de datos **ds-gold**.
 
-En el menú principal, seleccionar **Inventory** y haga clic en el icono
-**Hosts & clusters**
+En el menú principal, seleccionar **Inventory** y hacer clic en el icono
+**Hosts & clusters** (1).
 
-En el panel de navegación, hacer click con el botón derecho en
-**Photon-01** y seleccionar **Migrate**.
+En el panel de navegación, hacer clic con el botón derecho en
+**Photon-01** (2) y seleccionar **Migrate** (3).
 
 <img src="./media/image22.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Aparece el asistente de migración.
 
-En la página **Select a migration type**, click en **Change storage
-only**, click en **NEXT**.
+En la página **Select a migration type** (1), escoger **Change storage
+only** (2). **NEXT** (3).
 
 <img src="./media/image23.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Select storage**, seleccionar el almacén de datos
-**ds-gold**, dejar las demás configuraciones con sus valores
-predeterminados, click en **NEXT**.
+En la página **Select storage** (1), seleccionar el almacén de datos
+**ds-gold** (2) y dejar las demás configuraciones con sus valores
+predeterminados. **NEXT** (3).
 
 <img src="./media/image24.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-En la página **Ready to complete**, click en **FINISH**.
+En la página **Ready to complete** (1). **FINISH** (2).
 
 <img src="./media/image25.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-En el panel Tareas recientes, supervisar la tarea de migración hasta su
+En el panel de tareas recientes, supervisar la tarea de migración hasta su
 término.
 
 Verificar que la migración se haya realizado correctamente.
 
-En el panel de navegación, seleccionar **Photon-01**.
+En el panel de navegación, seleccionar **Photon-01** (1).
 
-En el panel derecho, click en la pestaña **Datastores**, verificar que
-el almacén de datos **ds-gold** esté en la lista.
+En el panel derecho, dar clic en la pestaña **Datastores** (2) para verificar que
+el almacén de datos **ds-gold** esté en la lista (3).
 
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
@@ -250,164 +235,158 @@ alt="A computer screen shot of a computer Description automatically generated" /
 
 ### **Configurar etiquetas de almacenamiento**
 
-Se asociarán etiquetas a los diferentes tipos de almacenamiento
+Se asociarán etiquetas a los diferentes tipos de almacenamiento.
 
-Del menú principal, seleccionar **Tags & Custom Attibutes**
+Del menú principal, seleccionar **Tags & Custom Attibutes** (2).
 
 <img src="./media/image27.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Para configurar una etiqueta y asociarla a un nivel de almacenamiento
 
-Click en **NEW.**
+Hacer clic en **NEW** (1).
 
 <img src="./media/image28.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Aparece el asistente, en el campo **Name** introducir **Gold Tier**,
-click en **Create New Category**
+Aparece el asistente. En el campo **Name** introducir **Gold Tier** (1),
+seleccionar **Create New Category** (2).
 
 <img src="./media/image29.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a message Description automatically generated" />
 
 Aparece una caja de diálogo en la que se muestran opciones de
-configuración
+configuración.
 
-En el campo **Category** **Name** escribir **Storage Tiers**, en
-**Associable Object Types** click en **All objects** para deseleccionar
-todos los objetos, seleccionar la opción **Datastore**, click en
-**CREATE**
+En el campo **Category** **Name** escribir **Storage Tiers** (1), en
+**Associable Object Types**, seleccionar **All objects** para deseleccionar
+todos los objetos (2). Seleccionar la opción **Datastore** (3). **CREATE** (4).
 
 <img src="./media/image30.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la caja de diálogo **Create** **Tag** dar click en **CREATE**
+En la caja de diálogo **Create** **Tag** dar clic en **CREATE** (1).
 
 <img src="./media/image31.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se muestra etiqueta **Gold Tier** creada
+Se muestra la etiqueta **Gold Tier** creada.
 
 <img src="./media/image32.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Generar otra etiqueta de almacenamiento **Silver Tag**
+Generar otra etiqueta de almacenamiento **Silver Tag**.
 
-Click en **NEW**
+Hacer clic en **NEW** (1).
 
 <img src="./media/image33.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En el campo **Name** escribir **Silver Tier,** click en el menú
-desplegabe de **Category**, seleccionar **Storage Tiers,** click en
-**CREATE**.
+En el campo **Name** escribir **Silver Tier** (1). Hacer clic en el menú
+desplegabe de **Category** y seleccionar **Storage Tiers** (2). **CREATE** (3).
 
 <img src="./media/image34.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se lista la nueva etiqueta **Silver Tier**
+Se lista la nueva etiqueta **Silver Tier.**
 
 <img src="./media/image35.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Asignar la etiqueta **Gold** **Tier** al datastore **ds-gold**
+Asignar la etiqueta **Gold Tier** al datastore **ds-gold.**
 
-En la vista de almacenamiento, click derecho sobre el datastore
-**ds-gold**, y seleccionar **Tags & Custom Attributes**, seleccionar
-**Assign Tag**
+En la vista de almacenamiento, dar clic derecho sobre el datastore
+**ds-gold** (2) y seleccionar **Tags & Custom Attributes** (3), escoger
+**Assign Tag** (4).
 
 <img src="./media/image36.png" style="width:6.5in;height:3.65625in" />
 
-Click en el check box **Gold Tier**, click en **ASSIGN**
+Seleccionar **Gold Tier** en el check box (1). **ASSIGN** (2).
 
 <img src="./media/image37.png" style="width:4.48698in;height:3.39823in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la vista de almacenamiento, click en el datastore **ds-gold**, click
-en la pestaña **Summary** y en la sección de tags ver que tiene ya
-asignada la etiqueta **Gold Tier.**
+En la vista de almacenamiento, seleccionar el datastore **ds-gold** (1). Dirigirse a la pestaña **Summary** (2) y en la sección de tags (3) ver que tiene ya asignada la etiqueta **Gold Tier** (4).
 
 <img src="./media/image38.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Asignar la etiqueta **Silver Tier** al datastore **ds-silver**
 
-En la vista de almacenamiento, click derecho sobre el datastore
-**ds-silver**, y seleccionar **Tags & Custom Attributes**, seleccionar
-**Assign Tag**
+En la vista de almacenamiento (1), dar clic derecho sobre el datastore
+**ds-silver** (2), escoger **Tags & Custom Attributes** (3) y seleccionar
+**Assign Tag** (4).
 
 <img src="./media/image39.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Click en el check box **Gold Tier**, click en **ASSIGN**
+Seleccionar **Gold Tier** en el check box (1). **ASSIGN** (2).
 
 <img src="./media/image40.png" style="width:4.48698in;height:3.39823in"
 alt="A computer screen with a message box Description automatically generated" />
 
-En la vista de almacenamiento, click en el datastore **ds-silver**,
-click en la pestaña **Summary** y en la sección de tags ver que tiene ya
-asignada la etiqueta **Silver Tier.**
+En la vista de almacenamiento, escoger el datastore **ds-silver** (1).
+Dirigirse a la pestaña **Summary** (2) y en la sección de tags (3) ver que tiene ya asignada la etiqueta **Silver Tier** (4).
 
 <img src="./media/image41.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 4**
 
-### **Crear Políticas de almacenamiento para máquinas virtuales**
+### **Crear políticas de almacenamiento para máquinas virtuales**
 
-Crear Políticas para asignar posteriormente a las VMs sin importar su
-estado de energía
+Crear políticas para asignarlas posteriormente a las VMs sin importar su
+estado de energía.
 
-Click en el **menú principal**, seleccionar **Polices and Profiles**
+Hacer clic en el **menú principal** (1) y seleccionar **Polices and Profiles** (2).
 
 <img src="./media/image42.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Crear una política Gold **Tier**
+Crear una política **Gold Tier**.
 
-Click en **VM Storage Polices**, Click en **CREATE**
+Seleccionar **VM Storage Polices** (1) y hacer clic en **CREATE** (2).
 
 <img src="./media/image43.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Se muestra el asistente
+Se muestra el asistente.
 
-En la página **Name and description** en el campo **Name** escribir
-**Gold Tier Policy,** Click en **NEXT**
+En la página **Name and description** (1) escribir en el campo **Name** 
+**Gold Tier Policy** (2). **NEXT** (3).
 
 <img src="./media/image44.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Policy structure**, en la sección **Datastore specific
-rules,** seleccionar **Enable tag** **based placement** rules, click en
-**NEXT**
+En la página **Policy structure** (1), en la sección **Datastore specific
+rules** (2), seleccionar **Enable tag** **based placement** rules (3).
+**NEXT** (4).
 
 <img src="./media/image45.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Tag based placement** seleccionar **Storage Tiers** en el
-menú desplegable **Tag Category**, click en **BROWSE TAGS**
+En la página **Tag based placement** (1), en el menú desplegable de **Tag Category**, seleccionar **Storage Tiers** (2). **BROWSE TAGS** (3).
 
 <img src="./media/image46.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Seleccionar **Gold Tier**, click en **OK**
+Seleccionar **Gold Tier** (1). **OK** (2).
 
 <img src="./media/image47.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Click en **NEXT**
+**NEXT** (1).
 
 <img src="./media/image48.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página **Storage compatibility** verificar que aparece listado el
-datastore **ds-gold,** click en **NEXT**
+En la página **Storage compatibility** (1) verificar que aparece listado el
+datastore **ds-gold** (2). **NEXT** (3).
 
 <img src="./media/image49.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la página de revisión click en **FINISH**
+En la página de revisión dar clic en **FINISH**.
 
 Aplicar los pasos similares para crear la política de almacenamiento
 **Silver Tier Policy**
