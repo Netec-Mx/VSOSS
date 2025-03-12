@@ -116,10 +116,9 @@ Para realizar un respaldo inmediato.
 
 Establecer **nfs://172.20.10.15/msnt/NFS-POOL** (1) en el **Backup location** 
 
-(2)
-Username: `root`
-
-Password: `VMware1!`
+> Username: `root`
+>
+> Password: `VMware1!`
 
 Seleccionar en **Data** la opción de **Stats, Events, and Tasks (3). START (4)
 
