@@ -120,7 +120,7 @@ Establecer **nfs://172.20.10.15/msnt/NFS-POOL** (1) en el **Backup location**
 >
 > Password: `VMware1!`
 
-Seleccionar en **Data** la opción de **Stats, Events, and Tasks (3). START (4)
+Seleccionar en la pestaña **Data** la opción de **Stats, Events, and Tasks** (3). START (4)
 
 <img src="./media/image10.png" style="width:5.81244in;height:4.03032in"
 alt="A screenshot of a computer Description automatically generated" />
