@@ -48,7 +48,7 @@ Dar clic en **OK.**
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-> Se obtiene acceso al escritorio remoto
+> Se obtiene acceso al escritorio remoto.
 >
 > <img src="./media/image4.png" style="width:6.5in;height:2.85276in"
 > alt="A screenshot of a computer Description automatically generated" />
@@ -65,9 +65,7 @@ Dar clic en **Login.**
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Seleccionar la vista de **Host y& clusters**
-
-Click en **sa-vcsa-01.vclass.local**, click en la pestaña **Configure**.
+Seleccionar la vista de **Host & clusters** (1), escoger **sa-vcsa-01.vclass.local**. Dirigirse a la pestaña **Configure**.
 
 En la sección **Security** click en **Key** **Providerr**
 
