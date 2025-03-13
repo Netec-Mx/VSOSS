@@ -1,22 +1,15 @@
-> # **VMware vSphere**
->
-> ## **Operación, Escalamiento y Seguridad**
->
-> ### **Versión 8**
->
-> #### **Guía de uso de laboratorio**
+# Práctica 16. Configuración del modo Lockdown mode en un host ESXi
 
-## **Laboratorio \# 16**
+## Objetivos de la práctica: 
 
-### **Configuración del modo Lockdown mode en un host Esxi**
+- Activar el servicio de SSH.
+- Habilitar y probar el modo Lockdown mode.
+- Deshabilitar el Modo Lockdown mode.
 
-Actividades por realizar:
+## Duración aproximada:
+- 20 minutos.
 
-1.  Activar el servicio de SSH
-
-2.  Habilitar y probar el modo Lockdown mode
-
-3.  Deshabilitar el Modo Lockdown mode
+## Instrucciones
 
 ## **Actividad \# 1**
 
