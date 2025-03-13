@@ -8,8 +8,6 @@
 ## Duración aproximada:
 - 20 minutos.
 
-> Versión 8
-
 ## Instrucciones
 
 ## **Actividad \# 1**
@@ -32,7 +30,7 @@ A manera de ejemplo
 >
 > Contraseña: `Arn0224!`
 >
-> Click en **Login**
+> Dar clic en **Login.**
 >
 Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
@@ -45,7 +43,7 @@ Al entrar, en la siguiente interfaz proporcionar:
 >
 > Contraseña: `VMware1!`
 
-Dar click en **OK**.
+Dar clic en **OK.**
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -62,7 +60,7 @@ User: `administrator@vsphere.local`
 
 Password`: VMware1!`
 
-Dar click en **Login**.
+Dar clic en **Login.**
 
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
