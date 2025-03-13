@@ -2,7 +2,7 @@
 
 ## Objetivos de la práctica:
 
-- Acceso a la consola de administración del vCenter Server.
+- Acceder a la consola de administración del vCenter Server.
 - Examinar las opciones para respaldos programados e inmediatos.
 - Lanzar un proceso de respaldo del vCenter Server.
 - Visualizar la opción de restauración de un backup con la aplicación Install.
