@@ -13,7 +13,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
 ---
  
 ## Índice:
- - [Práctica 1. Acceso al escritorio y revisión del inventario del vCenter Server.](./Prácticas/OS&S Lab 01 - Acceso al escritorio y revisión del inventario del vCenter Server/main.md)
+ - [Práctica 1. Acceso al escritorio y revisión del inventario del vCenter Server.](./Laboratorio1/main.md)
    - **Descripción**: 
    - ⏱️ **Duración estimada**:  minutos.
 
