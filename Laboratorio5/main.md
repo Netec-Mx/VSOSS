@@ -1,11 +1,11 @@
-# Práctica 5. Creación y configuración de un Switch Distribuido
+# Práctica 5. Creación y configuración de un switch distribuido
 
 ## Objetivos de la práctica:
 
-- Crear un Switch distribuido.
-- Configurar del Switch distribuido.
-- Integrar Hosts al Switch distribuido y migración de VMs.
-- Verificar la configuración del Switch distribuido.
+- Crear un switch distribuido.
+- Configurar del switch distribuido.
+- Integrar Hosts al switch distribuido y migración de VMs.
+- Verificar la configuración del switch distribuido.
 
 ## Duración aproximada:
 - 30 minutos.
