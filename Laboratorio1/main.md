@@ -9,6 +9,8 @@
 ## Duración aproximada:
 - 30 minutos.
 
+## Instrucciones
+
 ## **Actividad \# 1**
 
 ### **Acceso al escritorio remoto**
