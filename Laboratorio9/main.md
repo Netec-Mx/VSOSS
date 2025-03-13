@@ -3,7 +3,7 @@
 ## Objetivos de la práctica:
 
 - Agregar datastores para que los use el almacenamiento basado en políticas.
-- Usar vSphere Storage vMotion para migrar el almacenamiento de máquinas virtuales
+- Usar vSphere Storage vMotion para migrar el almacenamiento de máquinas virtuales.
 - Configurar etiquetas de almacenamiento.
 - Crear políticas de almacenamiento para máquinas virtuales.
 - Asignar políticas de almacenamiento a las máquinas virtuales.
