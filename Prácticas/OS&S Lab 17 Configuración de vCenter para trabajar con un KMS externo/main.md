@@ -1,26 +1,20 @@
-> # **VMware vSphere**
->
->## **Operación, Escalamiento y Seguridad**
->
-> ### **Versión 8**
->
-> #### **Guía de uso de laboratorio**
+# Práctica 17. Configuración de vCenter para trabajar con un KMS externo
 
-## **Laboratorio \# 17**
+## Duración aproximada:
 
-### **Configuración de vCenter para trabajar** **con un KMS externo**
+- Configurar un KMS en vCenter.
+- Establecer confianza entre un KMS y vCenter.
 
-#### Actividades por realizar:
+## Duración aproximada:
+- 40 minutos.
 
-1.  Configurar un KMS en vCenter
-
-2.  Establecer confianza entre un KMS y vCenter
+## Instrucciones
 
 ## **Actividad \# 1**
 
 ### **Configurar un KMS en vCenter**
 
-Utilizar la liga de acceso proporcionada por su instructor
+Utilizar la liga de acceso proporcionada por su instructor.
 
 A manera de ejemplo:
 [**https://vlabs.v2s.us/lab**](https://vlabs.v2s.us/lab)
@@ -28,9 +22,9 @@ A manera de ejemplo:
 <img src="./media/image1.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Utilizar el usuario y contraseña que le proporcione su instructor
+Utilizar el usuario y contraseña que le proporcione su instructor.
 
-A manera de ejemplo
+A manera de ejemplo:
 
 > Usuario: `student01a`
 >
@@ -38,19 +32,18 @@ A manera de ejemplo
 >
 > Click en **Login**
 >
-> Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a**
-> (1)
+Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
 > <img src="./media/image2.png" style="width:6.5in;height:3.65625in"
 > alt="A screenshot of a computer Description automatically generated" />
 
-Al entrar, en la siguiente interfaz proporcionar
+Al entrar, en la siguiente interfaz proporcionar:
 
 > Usuario: `student01`
 >
 > Contraseña: `mVMware1!`
 
-Click en **OK**
+Dar clic en **OK.**
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -61,13 +54,13 @@ alt="A screenshot of a computer Description automatically generated" />
 > alt="A screenshot of a computer Description automatically generated" />
 
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
-Client login interface**
+Client login interface.**
 
 User: `administrator@vsphere.local`
 
 Password: `VMware1!`
 
-Click en **Login**
+Dar clic en **Login.**
 
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
