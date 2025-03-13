@@ -41,7 +41,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
    - **Descripción**: Establecer las condiciones necesarias para la captura de tráfico y configurar el switch distribuido para ello. Realizar la captura de tráfico y verificar su correcta funcionalidad. Finalmente, restaurar la configuración original del switch distribuido desde un respaldo. 
    - ⏱️ **Duración estimada**: 40 minutos.
 
- - [Práctica 8. Exploración de la configuración de un datastore vSAN.](./)
+ - [Práctica 8. Exploración de la configuración de un datastore vSAN.](./Laboratorio8/main.md)
    - **Descripción**: Revisar la configuración de un datastore de vSAN y su política de almacenamiento predeterminada. Finalmente, verificar el estado de una VM en el datastore de vSAN. 
    - ⏱️ **Duración estimada**: 30 minutos.
 
