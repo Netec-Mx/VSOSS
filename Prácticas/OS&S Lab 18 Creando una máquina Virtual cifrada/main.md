@@ -125,16 +125,16 @@ alt="A screenshot of a computer Description automatically generated" />
 En la página **Customize hardware**, configurar la máquina virtual con
 los siguientes parámetros en su hardware virtual:
 
-- **1 CPU**
+- **1 CPU** (1).
 
-- **1 GB de memoria**
+- **1 GB de memoria** (2).
 
-- **1 disco de 2 GB**
+- **1 disco de 2 GB** (3).
 
-- **Red VM Network**
+- **Red VM Network** (4).
 
-Expandir la sección **New CD/DVD Drive**, activar la opción **Connect At
-Power**, Click en **NEXT**.
+Expandir la sección **New CD/DVD Drive** (5), activar la opción **Connect At
+Power** (6). **NEXT** (8).
 
 <img src="./media/image14.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
