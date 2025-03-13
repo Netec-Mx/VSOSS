@@ -1,8 +1,8 @@
-# Práctica 18. Creando una máquina Virtual cifrada
+# Práctica 18. Creando una máquina virtual cifrada
 
 ## Objetivos de la práctica:
 
-- Crear una Máquina virtual cifrada.
+- Crear una máquina virtual cifrada.
 - Confirmar que la máquina virtual está cifrada con un proveedor de llaves standard.
 
 ## Duración aproximada:
