@@ -2,7 +2,7 @@
 
 ## Objetivos de la práctica:
 
-- Explorar en el cluster el estado de las vCLS VMs.
+- Explorar en el clúster el estado de las vCLS VMs.
 - Realiar el manejo de vCLS VMs al establecer el modo de mantenimiento del storage en donde residen (usar modo de retiro).
 
 ## Duración aproximada:
