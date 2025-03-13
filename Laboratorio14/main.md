@@ -31,7 +31,7 @@ A manera de ejemplo:
 >
 > Contraseña: `Arn0224!`
 >
-> Click en **Login**
+> Dar clic en **Login.**
 >
 Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
