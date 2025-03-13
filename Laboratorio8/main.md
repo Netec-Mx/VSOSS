@@ -5,6 +5,9 @@
 - Revisar la política por default de almacenamiento en vSAN.
 - Revisar una VM en el datastore de vSAN.
 
+## Duración aproximada:
+- 30 minutos.
+
 ## **Actividad \# 1**
 
 ### **Revisar la configuración de un datastore de vSAN**
