@@ -12,8 +12,6 @@
 ## Duración aproximada:
 - 40 minutos.
 
-> Versión 8
-
 ## Instrucciones
 
 ## **Actividad \# 1**
@@ -30,13 +28,13 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Utilizar el usuario y contraseña que le proporcione su instructor.
 
-A manera de ejemplo
+A manera de ejemplo:
 
 > Usuario: `student01a`
 >
 > Contraseña: `Arn0224!`
 >
-> Click en **Login**
+> Dar clic en **Login.**
 >
 Seleccionar en esta interfaz el primer pod de trabajo **vPodProd001a** (1).
 >
@@ -49,7 +47,7 @@ Al entrar, en la siguiente interfaz proporcionar:
 >
 > Contraseña: `VMware1!`
 
-Dar click en **OK**.
+Dar clic en **OK.**
 
 <img src="./media/image3.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
@@ -66,7 +64,7 @@ User: `administrator@vsphere.local`
 
 Password: `VMware1!`
 
-Click en **Login**
+Dar clic en **Login.**
 
 <img src="./media/image5.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
