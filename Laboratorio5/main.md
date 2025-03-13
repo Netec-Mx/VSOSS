@@ -4,7 +4,7 @@
 
 - Crear un switch distribuido.
 - Configurar del switch distribuido.
-- Integrar Hosts al switch distribuido y migración de VMs.
+- Integrar hosts al switch distribuido y migración de VMs.
 - Verificar la configuración del switch distribuido.
 
 ## Duración aproximada:
