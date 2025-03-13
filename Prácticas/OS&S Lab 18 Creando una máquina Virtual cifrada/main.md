@@ -115,6 +115,13 @@ En la opción **Guest OS Version** seleccionar **VMware Photon OS
 <img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
+En la opción de **CD/DVD Drive**, escoger **Datastore ISO File**.
+Seleccionar el archivo el datastore **OPSCALE-Datastore** (1), dar clic en el
+folder **ISO** (2), seleccionar el archivo **photon-3.0-a0f216d.iso** (3). **OK** (4).
+
+<img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
+alt="A screenshot of a computer Description automatically generated" />
+
 En la página **Customize hardware**, configurar la máquina virtual con
 los siguientes parámetros en su hardware virtual:
 
@@ -125,13 +132,6 @@ los siguientes parámetros en su hardware virtual:
 - **1 disco de 2 GB**
 
 - **Red VM Network**
-
-En la opción de **CD/DVD Drive**, escoger **Datastore ISO File**.
-Seleccionar el archivo el datastore **OPSCALE-Datastore** (1), dar clic en el
-folder **ISO** (2), seleccionar el archivo **photon-3.0-a0f216d.iso** (3). **OK** (4).
-
-<img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
-alt="A screenshot of a computer Description automatically generated" />
 
 Expandir la sección **New CD/DVD Drive**, activar la opción **Connect At
 Power**, Click en **NEXT**.
