@@ -10,7 +10,7 @@
 
 ### **Creación y configuración de un Switch Distribuido**
 
-Actividades a realizar:
+#### Actividades a realizar:
 
 1.  Crear un Switch distribuido
 
@@ -67,7 +67,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
 Client login interface**
 
-User: `administrator@vsphere.local`
+User: `<administrator@vsphere.local>`
 
 Password: `VMware1!`
 
@@ -87,25 +87,25 @@ alt="A screenshot of a computer Description automatically generated" />
 En el paso de Nombre y ubicación establecer como nombre: **vds
 Production** (2), **NEXT** (3)
 
-<img src="./media/image7.png" style="width:8in;height:6.in"
+<img src="./media/image7.png" style="width:6.00262in;height:4.52996in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso para selección de la versión de Switch dejar la versión por
 default **Esxi 8.0** (2), **NEXT** (3)
 
-<img src="./media/image8.png" style="width:8in;height:6.in"
+<img src="./media/image8.png" style="width:6.33in;height:4.89621in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso de configuración de especificaciones dejar los campos con
 opciones de **default** y asignar el nombre **dps-SA-Production** al
 **port group**. (2), **NEXT** (3)
 
-<img src="./media/image9.png" style="width:8in;height:6.in"
+<img src="./media/image9.png" style="width:7.32078in;height:6.94163in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Revisar la configuración del Switch, **FINISH** (3)
 
-<img src="./media/image10.png" style="width:8in;height:6.in"
+<img src="./media/image10.png" style="width:6.29848in;height:4.91418in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se presenta el nuevo SW
@@ -113,9 +113,9 @@ Se presenta el nuevo SW
 <img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-## Actividad \# 2
+## **Actividad \# 2**
 
-### **Configuración del Switch distribuido**
+**Configuración del Switch distribuido**
 
 En la vista de redes, seleccionar el **SA-Datacenter** y expandir el
 switch **vds Production**
@@ -134,16 +134,31 @@ alt="A screenshot of a computer Description automatically generated" />
 Se muestra la caja de diálogo siguiente, seleccionar **Teaming** **and
 Failover**
 
-<img src="./media/image14.png" style="width:8in;height:6.in"
+En esta caja de diálogo se deberá establecer que solamente el **Uplink
+1** debe estar activo.
+
+En la lista de **Failover order** hay 3 secciones **Active uplinks**,
+**Stanby uplinks** y **Unused uplinks**
+
+Inicialmente todos los uplinks están en la sección de **Active uplinks**
+como se muestra en la imagen.
+
+La tarea es dejar solamente el **Uplink 1**en la sección de **Active
+uplinks**
+
+<img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Seleccionar un **Uplink** a la vez y mover hacia abajo a la sección de
-**Standby uplinks** con el botón **MOVE DOWN** para terminar con la
-configuración siguiente, sólo el **uplink 1** (3) queda activo, los
-otros están inactivos (4), aceptar las opciones de **monitoring** y
-**micellaneous** con valores de default. Click en **OK**
+Para esto seleccionar individualmente con un click el Uplinks 2 y
+moverlo hacia abajo a la sección de **Standby uplinks** con el botón
+**MOVE DOWN,** repetir la operación con el **uplink 3** y el **uplink
+4**, para terminar con la configuración siguiente.
 
-<img src="./media/image15.png" style="width:8in;height:6.in"
+Sólo el **uplink 1** (3) queda activo, los otros están inactivos (4),
+aceptar las opciones de **monitoring** y **micellaneous** con valores de
+default. Click en **OK**
+
+<img src="./media/image15.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 3**
@@ -160,13 +175,13 @@ alt="A screenshot of a computer Description automatically generated" />
 En la opción de seleccionar tareas, click en **Add Host** (2), **NEXT**
 (3)
 
-<img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso para seleccionar host, click en **SELECT ALL** (2), **NEXT**
 (3)
 
-<img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso de administrar tarjetas de red físicas, seleccionar la
@@ -174,39 +189,39 @@ En el paso de administrar tarjetas de red físicas, seleccionar la
 lista de **Related Host** (3), click en **X** (4)
 
 <img src="./media/image19.png"
-style="width:6.19419in;height:3.5298in" />
+style="width:6.5in;height:3.65625in" />
 
 Seleccionar **uplink 1** (1) de la lista desplegable
 
-<img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 El resultado es el siguiente, **NEXT** (4)
 
-<img src="./media/image21.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image21.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso de **administració**n de adaptadores **VMkernel** click en
 **NEXT**
 
-<img src="./media/image22.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image22.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el paso de migrar **VMs**, click en **Migrate virtual machine
 networkin**g (2), click en **configure per network adapter** (3), click
 en **ASSIGN PORT GROUP** (5)
 
-<img src="./media/image23.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 La asignación se muestra
 
-<img src="./media/image24.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Revisar la configuración, **FINISH** (3)
 
-<img src="./media/image25.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image25.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 4**

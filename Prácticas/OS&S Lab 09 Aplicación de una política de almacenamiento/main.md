@@ -8,7 +8,7 @@
 
 ## **Laboratorio \# 9**
 
->###  **Aplicación de una política de almacenamiento**
+> ### **Aplicación de una política de almacenamiento**
 
 #### **Actividades por realizar:**
 
@@ -71,7 +71,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
 Client login interface**
 
-User: `administrator@vsphere.local`
+User: `<administrator@vsphere.local>`
 
 Password: `VMware1!`
 
@@ -96,13 +96,13 @@ En el panel de navegación, click con el botón derecho en
 
 Aparece el asistente **New Datastorage**.
 
-<img src="./media/image8.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image8.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Type**, dejar **VMFS** seleccionado y hacer click en
 **NEXT**.
 
-<img src="./media/image9.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image9.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Name and device Selection**, ingrese **ds-gold** en el
@@ -114,25 +114,25 @@ En el menú desplegable **Select a host**, seleccionar ESXi host
 En la lista de LUNs, seleccionar **LUN 7** con la descripción de entrada
 FreeNAS ISCSI Disk (naa..) y capacidad **8.00 GB**, click en **NEXT**.
 
-<img src="./media/image10.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **VMFS version**, dejar **VMFS 6** seleccionado y hacer
 click en **NEXT**.
 
-<img src="./media/image11.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Partition configuration**, mantener los valores
 predeterminados, click en **NEXT**.
 
-<img src="./media/image12.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image12.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Ready to complete,** para terminar, revise la
 configuración, click en **FINISH**.
 
-<img src="./media/image13.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image13.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el panel de tareas recientes, verificar que la tarea se haya
@@ -156,7 +156,7 @@ Aparece el asistente **New datastore**.
 
 En la página **Type**, dejar **VMFS** seleccionado, click en **NEXT**.
 
-<img src="./media/image16.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image16.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a message Description automatically generated" />
 
 En la página **Name and device selection**, ingresar **ds-silver** en el
@@ -168,25 +168,25 @@ En el menú desplegable **Select a host**, seleccionar ESXi host
 En la lista de LUNs, seleccionar **LUN 8** con la descripción de entrada
 FreeNAS ISCSI Disk (naa..) y capacidad **12.00 GB**, click en **NEXT**.
 
-<img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image17.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **VMFS version**, dejar **VMFS 6** seleccionado, click en
 **NEXT**.
 
-<img src="./media/image18.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image18.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Partition configuration**, mantener los valores
 predeterminados, click en **NEXT**.
 
-<img src="./media/image19.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image19.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Ready to complete**, revisar la configuración, click en
 **FINISH**.
 
-<img src="./media/image20.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En el panel tareas recientes, verificar que se haya terminado la tarea.
@@ -218,19 +218,28 @@ Aparece el asistente de migración.
 En la página **Select a migration type**, click en **Change storage
 only**, click en **NEXT**.
 
-<img src="./media/image23.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Select storage**, seleccionar el almacén de datos
 **ds-gold**, dejar las demás configuraciones con sus valores
-predeterminados, click en **NEXT**.
+predeterminados, estos elementos de configuración son:
 
-<img src="./media/image24.png" style="width:6.19419in;height:3.5298in"
+- **Select virtual disk format: Same as source**, para conservar la
+  configuración de discos pesados o ligeros.
+
+- También mantendrá la política de almacenamiento asignada
+
+- Sin utilizar la migración de discos con **storage DRS**
+
+click en **NEXT**.
+
+<img src="./media/image24.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 En la página **Ready to complete**, click en **FINISH**.
 
-<img src="./media/image25.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image25.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 En el panel Tareas recientes, supervisar la tarea de migración hasta su
@@ -267,7 +276,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Aparece el asistente, en el campo **Name** introducir **Gold Tier**,
 click en **Create New Category**
 
-<img src="./media/image29.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image29.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a message Description automatically generated" />
 
 Aparece una caja de diálogo en la que se muestran opciones de
@@ -278,12 +287,12 @@ En el campo **Category** **Name** escribir **Storage Tiers**, en
 todos los objetos, seleccionar la opción **Datastore**, click en
 **CREATE**
 
-<img src="./media/image30.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image30.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la caja de diálogo **Create** **Tag** dar click en **CREATE**
 
-<img src="./media/image31.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image31.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra etiqueta **Gold Tier** creada
@@ -302,7 +311,7 @@ En el campo **Name** escribir **Silver Tier,** click en el menú
 desplegabe de **Category**, seleccionar **Storage Tiers,** click en
 **CREATE**.
 
-<img src="./media/image34.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image34.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Se lista la nueva etiqueta **Silver Tier**
@@ -320,7 +329,7 @@ En la vista de almacenamiento, click derecho sobre el datastore
 
 Click en el check box **Gold Tier**, click en **ASSIGN**
 
-<img src="./media/image37.png" style="width:4.48698in;height:3.39823in"
+<img src="./media/image37.png" style="width:6.5in;height:2.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la vista de almacenamiento, click en el datastore **ds-gold**, click
@@ -341,7 +350,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Click en el check box **Gold Tier**, click en **ASSIGN**
 
-<img src="./media/image40.png" style="width:4.48698in;height:3.39823in"
+<img src="./media/image40.png" style="width:2.59679in;height:0.93624in"
 alt="A computer screen with a message box Description automatically generated" />
 
 En la vista de almacenamiento, click en el datastore **ds-silver**,
@@ -375,36 +384,36 @@ Se muestra el asistente
 En la página **Name and description** en el campo **Name** escribir
 **Gold Tier Policy,** Click en **NEXT**
 
-<img src="./media/image44.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image44.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Policy structure**, en la sección **Datastore specific
 rules,** seleccionar **Enable tag** **based placement** rules, click en
 **NEXT**
 
-<img src="./media/image45.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image45.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Tag based placement** seleccionar **Storage Tiers** en el
 menú desplegable **Tag Category**, click en **BROWSE TAGS**
 
-<img src="./media/image46.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image46.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Seleccionar **Gold Tier**, click en **OK**
 
-<img src="./media/image47.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image47.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Click en **NEXT**
 
-<img src="./media/image48.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image48.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Storage compatibility** verificar que aparece listado el
 datastore **ds-gold,** click en **NEXT**
 
-<img src="./media/image49.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image49.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página de revisión click en **FINISH**
@@ -437,7 +446,7 @@ alt="A computer screen shot of a computer Description automatically generated" /
 Desde el menú desplegable **VM storage policy**, seleccionar **Gold Tier
 Policy**, click en **OK**
 
-<img src="./media/image52.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image52.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Asegurarse que se asignó la política al dar click en la VM **Photon-01**
@@ -461,7 +470,7 @@ Seleccionar **VM Policies**, click en **Edit VM Storage Policies**
 Desde el menú desplegable **VM storage policy**, seleccionar **Silver
 Tier Policy**, click en **OK**
 
-<img src="./media/image54.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image54.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Asegurarse que se asignó la política al dar click en la VM
@@ -485,17 +494,17 @@ alt="A screenshot of a computer Description automatically generated" />
 En página **Select a migration type,** click en **Change storage only**,
 click en **NEXT**
 
-<img src="./media/image57.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image57.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Select Storage Silver** click en **NEXT**
 
-<img src="./media/image58.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image58.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 En la página **Ready to Complete**. Click en **FINISH**
 
-<img src="./media/image59.png" style="width:6.19419in;height:3.5298in"
+<img src="./media/image59.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Esperar a que se lleve a cabo la migración

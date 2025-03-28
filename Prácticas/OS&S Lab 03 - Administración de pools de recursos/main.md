@@ -2,7 +2,7 @@
 >
 > ## **Operación, Escalamiento y Seguridad**
 >
-> ### **Versión 8**
+>### **Versión 8**
 >
 > #### **Guía de uso de laboratorio**
 
@@ -71,7 +71,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Abrir una instancia del browser Firefox con acceso directo al **vSphere
 Client login interface**
 
-User: `administrator@vsphere.local`
+User: `<administrator@vsphere.local>`
 
 Password: `VMware1!`
 
@@ -111,13 +111,13 @@ alt="A computer screen shot of a computer Description automatically generated" /
 Al expander el campo de **vCPU** se tienen los siguientes campos
 disponibles
 
-<img src="./media/image10.png" style="width:8in;height:6.65625in"
+<img src="./media/image10.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Si se apaga la VM entonces se tendrá acceso al campo **Scheduling**
 **Affinity** (1)
 
-<img src="./media/image11.png" style="width:8in;height:6.65625in"
+<img src="./media/image11.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 ## **Actividad \# 2**
@@ -145,7 +145,7 @@ sa-vcsa-01.class.local**
 <img src="./media/image14.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-Accesar con el password **VMware1!** si se requiere, se presenta el
+Accesar con el password `VMware1!` si se requiere, se presenta el
 escritorio de la VM
 
 <img src="./media/image15.png" style="width:6.5in;height:3.49375in"
@@ -158,7 +158,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 En la aplicación **Terminal** emitir el comando
 
-./**Desktop/cpubusy.pl**
+`./Desktop/cpubusy.pl`
 
 Entonces se lanza una aplicación que realizar cálculos matemáticos; la
 medida del desempeño es el tiempo en segundo que le toma hacer un ciclo
@@ -226,7 +226,7 @@ alt="A computer screen shot of a computer Description automatically generated" /
 En la pestaña **Virtual Hardware** (1), expander la sección **vCPU**
 (2), escribir **0** en el campo **Scheduling Affinity** (3), **OK** (4).
 
-<img src="./media/image24.png" style="width:8in;height:6.65625in"
+<img src="./media/image24.png" style="width:6.5in;height:5.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
 Repetir la misma operación en las VMs **Linux-CPU-04, Linux-CPU-05**
@@ -235,7 +235,7 @@ Repetir la misma operación en las VMs **Linux-CPU-04, Linux-CPU-05**
 
 ## **Actividad \# 4**
 
-### **Revisar desempeño de VMs con condiciones de contención**
+**Revisar desempeño de VMs con condiciones de contención**
 
 Accesar de nuevo a las consolas de las VMs **Linux-CPU-03, Linux-CPU-04,
 Linux-CPU-05** y ejecutar el comando en la aplicación **Terminal**
@@ -262,7 +262,7 @@ entonces más segundos para el ciclo de cálculo
 <img src="./media/image26.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-## **Actividad \# 5**
+## Actividad \# 5
 
 ### **Creación de pools de recursos**
 
@@ -284,7 +284,7 @@ operación **Manual** , **Partially Automated** y **Fully Automated**.
 
 Seleccionar **Manual** (2), **OK** (3)
 
-<img src="./media/image28.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image28.png" style="width:6.5in;height:5.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
 Se crearán dos pools, uno con alta prioridad de asignación de recursos y
@@ -304,7 +304,7 @@ Al ingresar a la definición de pools en vCPUs y Memoria podrá observar
 los campos siguientes, en **Shares** se tienen las opciones **Low**,
 **Normal**, **High** (1) y **Custom** (2)
 
-<img src="./media/image30.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image30.png" style="width:6.5in;height:5.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Para este primer pool establecer las opciones **Name:**
@@ -312,7 +312,7 @@ Para este primer pool establecer las opciones **Name:**
 (2), **Reservation Máximum =4,000** (3) y activar **Expandable** (4),
 **OK** (5)
 
-<img src="./media/image31.png" style="width:6.5in;height:3.65625in"
+<img src="./media/image31.png" style="width:6.5in;height:5.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
 Se incluye en el inventario del cluster el Pool
@@ -386,8 +386,14 @@ Después de varios minutos observar el desempeño de las VMs
 Se puede observar **alto desempeño** en las VMs **Linux-CPU-01** y
 **Linux-CPU-02**
 
+<img src="./media/image40.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
+
 Se puede observar **bajo desempeño** en las VMs **Linux-CPU-03**,
 **Linux-CPU-04, y Linux-CPU-05**
+
+<img src="./media/image41.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Los resultados anteriores es el resultado de la utilización de pools de
 recursos.
@@ -401,7 +407,13 @@ En la vista de **Hosts & Clusters** (1), click en el cluster
 todas las VMs (4), en el menú contextual seleccionar **Power**, click en
 **Shut Down Guest OS** (5)
 
+<img src="./media/image42.png"
+style="width:6.50069in;height:3.65347in" />
+
 Aceptar la operación múltiple (yes)
+
+<img src="./media/image43.png"
+style="width:4.88681in;height:2.11319in" />
 
 Eliminar en sus especificaciones la afinidad de cpu
 
@@ -410,6 +422,9 @@ En la vista de **Hosts & Clusters** (1), click en la VM **Linux_01**
 
 Eliminar afinidad de CPU, en el campo de **Scheduling Affinity** borrar
 **0** (2), **OK** (3)
+
+<img src="./media/image44.png"
+style="width:3.31389in;height:3.72708in" />
 
 Repetir la operación para las VMs **Linux_02**, **Linux_03** y
 **Linux_04**
@@ -421,3 +436,6 @@ En la vista de **Hosts & Clusters** (1), click en el cluster
 en **vSphere RDS** (4), click en **EDIT** (6)
 
 Configurar **Automatic level** en **Fully Automated** (2).
+
+<img src="./media/image45.png"
+style="width:6.50069in;height:5.65347in" />
