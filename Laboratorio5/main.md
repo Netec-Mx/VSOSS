@@ -124,12 +124,19 @@ alt="A screenshot of a computer Description automatically generated" />
 
 Se muestra la caja de diálogo siguiente: seleccionar **Teaming** **and
 Failover.**
-Seleccionar un **Uplink** a la vez y mover hacia abajo a la sección de
-**Standby uplinks** con el botón **MOVE DOWN** para terminar con la
-configuración siguiente:
+
+En esta caja de diálogo se deberá establecer que solamente el **Uplink 1** debe estar activo.
+
+En la lista de **Failover order** hay 3 secciones **Active uplinks, Stanby uplinks** y **Unused uplinks.**
+
+Inicialmente todos los uplinks están en la sección de **Active uplinks** como se muestra en la imagen.
+
+Dejar solamente el **Uplink 1** en la sección de **Active uplinks.**
 
 <img src="./media/image14.png" style="width:8in;height:6.in"
 alt="A screenshot of a computer Description automatically generated" />
+
+Seleccionar individualmente con un clic el **Uplink 2** y moverlo hacia abajo a la sección de **Standby uplinks** con el botón **MOVE DOWN**. Repetir la operación con el **Uplink 3** y el **Uplink 4**, para terminar con la configuración siguiente.
 
 Sólo el **uplink 1** (3) queda activo, los
 otros están inactivos (4). Aceptar las opciones de **monitoring** y
@@ -149,8 +156,8 @@ Host** (2).
 <img src="./media/image16.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la opción de seleccionar tareas (1), elegir **Add Host** (2). **NEXT**.
-(3)
+En la opción de seleccionar tareas (1), elegir **Add Host** (2). **NEXT**
+(3).
 
 <img src="./media/image17.png" style="width:6.19419in;height:3.5298in"
 alt="A screenshot of a computer Description automatically generated" />
