@@ -375,8 +375,14 @@ Después de varios minutos, observar el desempeño de las VMs.
 Se puede observar **alto desempeño** en las VMs **Linux-CPU-01** y
 **Linux-CPU-02**
 
+<img src="./media/image40.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
+
 Se puede observar **bajo desempeño** en las VMs **Linux-CPU-03**,
 **Linux-CPU-04, y Linux-CPU-05**
+
+<img src="./media/image41.png" style="width:6.5in;height:3.65625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Los resultados anteriores es el resultado de la utilización de pools de
 recursos.
@@ -390,7 +396,13 @@ En la vista de **Hosts & Clusters** (1), elegir el clúster
 todas las VMs (4), en el menú contextual seleccionar **Power**, dar click en
 **Shut Down Guest OS** (5).
 
+<img src="./media/image42.png"
+style="width:6.50069in;height:3.65347in" />
+
 Aceptar la operación múltiple. **YES**.
+
+<img src="./media/image43.png"
+style="width:4.88681in;height:2.11319in" />
 
 Eliminar en sus especificaciones la afinidad de CPU.
 
@@ -399,6 +411,9 @@ En la vista de **Hosts & Clusters** (1), click en la VM **Linux_01**
 
 Eliminar afinidad de CPU, en el campo de **Scheduling Affinity** borrar
 **0** (2). **OK** (3).
+
+<img src="./media/image44.png"
+style="width:3.31389in;height:3.72708in" />
 
 Repetir la operación para las VMs **Linux_02**, **Linux_03** y
 **Linux_04**
@@ -410,3 +425,6 @@ En la vista de **Hosts & Clusters** (1), click en el cluster
 en **vSphere RDS** (4), click en **EDIT** (6)
 
 Configurar **Automatic level** en **Fully Automated** (2).
+
+<img src="./media/image45.png"
+style="width:6.50069in;height:5.65347in" />
