@@ -208,7 +208,13 @@ alt="A screenshot of a computer Description automatically generated" />
 
 En la página **Select storage** (1), seleccionar el almacén de datos
 **ds-gold** (2) y dejar las demás configuraciones con sus valores
-predeterminados. **NEXT** (3).
+predeterminados, estos elementos de configuración son:
+
+- **Select virtual disk format:** **Same as source**, para conservar la configuración de discos pesados o ligeros.
+- También, mantendrá la política de almacenamiento asignada.
+- Sin utilizar la migración de discos con **storage DRS**.
+
+**NEXT** (3).
 
 <img src="./media/image24.png" style="width:6.19419in;height:3.5298in"
 alt="A computer screen shot of a computer Description automatically generated" />
