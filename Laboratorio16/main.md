@@ -151,12 +151,14 @@ Seleccionar **Disable** (1) **OK** (2).
 <img src="./media/image16.png" style="width:4.48698in;height:3.39823in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 Se muestra el nuevo estado.
 
 <img src="./media/image17.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
 
-Apagar el servicio de SSH.
+## Apagar el servicio de SSH
 
 En la vista de **Hosts & Clusters** (1), escoger el host **sa-esxi-01**
 (2). Desplazarse a la pestaña **Configure** (3) y en la sección **System**,
