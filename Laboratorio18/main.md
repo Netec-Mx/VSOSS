@@ -159,6 +159,8 @@ Seleccionar la máquina virtual **VM-Cifrada** en el inventario (1).
 En la pestaña **Summary** (2), revisar las especificaciones en la sección
 **Virtual Machine Details** (3).
 
+## Resultado esperado
+
 Verificar que la máquina está cifrada.
 
 <img src="./media/image17.png" style="width:6.5in;height:3.65625in"
