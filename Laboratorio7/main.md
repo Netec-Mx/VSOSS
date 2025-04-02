@@ -259,6 +259,8 @@ capturados.
 <img src="./media/image30.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 Terminar el ping en la **VM Linux01**.
 
 <img src="./media/image31.png" style="width:6.5in;height:3.65625in"
