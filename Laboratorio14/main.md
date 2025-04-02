@@ -202,15 +202,17 @@ A la derecha, en la lista **View**, seleccionar **CPU ready** (5).
 <img src="./media/image23.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer screen Description automatically generated" />
 
+## Resultado esperado
+
 <img src="./media/image24.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-En la VM2 se muestra de igual manera contensión.
+De igual mamera, en la VM2 se muestra contensión.
 
 <img src="./media/image25.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
 
-1. Retornar las VMs a su estado anterior.
+## Retornar las VMs a su estado anterior.
 
 2. Apagar las VMs.
 
