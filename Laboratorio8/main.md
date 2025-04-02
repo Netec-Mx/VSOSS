@@ -186,5 +186,7 @@ placement** (4). En la sección de la derecha aparecen los componentes
 del objeto **VM Photon-03** ubicados en los servidores del clúster
 **ESXI-06, ESXI-05 y ESXI-04** (5).
 
+## Resultado esperado
+
 <img src="./media/image17.png" style="width:6.5in;height:3.65625in"
 alt="A computer screen shot of a computer Description automatically generated" />
