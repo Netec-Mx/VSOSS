@@ -235,6 +235,8 @@ de **VMs** (3).
 <img src="./media/image28.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 Seleccionar el port group (1). Dirigirse a la pestaña **Ports** (2), donde se muestra
 la lista de hosts asociados, **VMs** y estado de uplinks.
 
