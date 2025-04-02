@@ -340,5 +340,7 @@ alt="A screenshot of a computer Description automatically generated" />
 Esto despliega el archivo tipo **JSON** para su revisión y, posible
 edición si se desea importar, aplicar al clúster.
 
+## Resultado esperado
+
 <img src="./media/image42.png" style="width:6.5in;height:3.49375in"
 alt="A screenshot of a computer Description automatically generated" />
