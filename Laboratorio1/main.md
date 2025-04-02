@@ -291,6 +291,8 @@ Se muestra la advertencia de actualización. **OK**.
 <img src="./media/image27.png" style="width:9.02524in;height:5.38682in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 Nuestro inventario deberá lucir como se muestra en la imagen:
 
 <img src="./media/image28.png" style="width:6.5in;height:3.49375in"
