@@ -292,6 +292,8 @@ correctamente.
 En el panel derecho, con la VM seleccionada (1). Dirigirse a la pestaña **Summary** (2) y observar el recuadro **VM Storage Policies** (3).
 Dar clic en **Check Compliance** (4).
 
+## Resultado esperado
+
 <img src="./media/image31.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
