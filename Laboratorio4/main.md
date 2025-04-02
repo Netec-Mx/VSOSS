@@ -198,7 +198,7 @@ alt="A computer screen shot of a message Description automatically generated" />
 
 **CANCEL**
 
-Alternativamente, **para poner el clÚster en modo de retiro**.
+Alternativamente, **para poner el clúster en modo de retiro**.
 
 En la vista de **Host & Clusters** (1), seleccionar el clúster
 **SA-Compute-01** (2). Dirigirse a la pestaña **Configure** (3).
@@ -220,6 +220,8 @@ tipo **vCLS** (6).
 <img src="./media/image20.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 El datastore ICM-Datastore está en modo mantenimiento sin VMs encendidas.
 
 <img src="./media/image21.png" style="width:6.5in;height:3.65625in"
@@ -227,7 +229,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 **Así los servicios de DRS y HA se verán afectados directamente.**
 
-Para revertir la operación:
+## Para revertir la operación:
 
 Seleccionar la vista de **Host & Clusters.**
 
