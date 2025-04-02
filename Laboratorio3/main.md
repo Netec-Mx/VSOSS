@@ -372,6 +372,8 @@ y emitir el comando:
 
 Después de varios minutos, observar el desempeño de las VMs.
 
+## Resultado esperado
+
 Se puede observar **alto desempeño** en las VMs **Linux-CPU-01** y
 **Linux-CPU-02**
 
@@ -387,7 +389,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 Los resultados anteriores es el resultado de la utilización de pools de
 recursos.
 
-Restaurar las VMs a una operación normal.
+## Restaurar las VMs a una operación normal.
 
 Apagar las VMs.
 
