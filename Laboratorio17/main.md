@@ -147,6 +147,8 @@ alt="A computer screen shot of a computer Description automatically generated" /
 <img src="./media/image16.png" style="width:4.48698in;height:3.39823in"
 alt="A screenshot of a computer Description automatically generated" />
 
+## Resultado esperado
+
 Confirmar que se ha establecido confianza entre el **KMS** and
 **vCenter.**
 
