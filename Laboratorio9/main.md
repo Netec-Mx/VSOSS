@@ -482,5 +482,7 @@ Con la VM **Photon-02** seleccionada (2), dirigirse a la pestaña **Summary** (2
 (**compliant**) con la política porque migramos los archivos de la misma
 al datastore correspondiente a esta política (5).
 
+## Resultado esperado
+
 <img src="./media/image60.png" style="width:6.5in;height:3.65625in"
 alt="A screenshot of a computer Description automatically generated" />
